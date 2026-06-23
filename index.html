@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHHING MENG | Premium Crop Nutrition Cambodia</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Hanuman:wght@400;700&family=Noto+Serif+Khmer:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        body { font-family: 'Fredoka', 'Hanuman', sans-serif; }
+        .hero-font { font-family: 'Playfair Display', 'Noto Serif Khmer', serif; }
+        
+        details summary::-webkit-details-marker { display: none; }
+        summary { list-style: none; }
+
+        .lang-en, .lang-kh {
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        /* Clean Language Visibility Layer Switchers */
+        html[lang="km"] .lang-en, html[lang="kh"] .lang-en { display: none !important; }
+        html[lang="en"] .lang-kh { display: none !important; }
+        
+        /* Mobile Menu Drawer Transition States */
+        /* ម៉ឺនុយទូរស័ព្ទដំណើរការដោយប្រើ CSS Hardware Acceleration */
+#mobile-menu {
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-in-out;
+}
+
+
+        /* Scroll Reveal System Custom Styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Hero Cover Slideshow Loop (4 Images) */
+        .slide-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0;
+            animation: heroSlideshow 16s infinite ease-in-out;
+        }
+
+        /* Staggered start times for each image */
+        .slide-bg:nth-child(1) { animation-delay: 0s; }
+        .slide-bg:nth-child(2) { animation-delay: 4s; }
+        .slide-bg:nth-child(3) { animation-delay: 8s; }
+        .slide-bg:nth-child(4) { animation-delay: 12s; }
+
+        @keyframes heroSlideshow {
+            0% { opacity: 0; }
+            5% { opacity: 20.20; }    /* Fades in to match design's 40% opacity */
+            25% { opacity: 20.20; }   /* Stays visible */
+            30% { opacity: 0; }      /* Fades out safely */
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-[#FDFDFB] text-[#212529] antialiased">
+
+    <div class="bg-[#1B4332] text-white text-[14px] font-semibold py-2.5 px-4 md:px-6 flex justify-between items-center border-b border-[#E4B044]/30">
+        <div class="flex items-center space-x-2 truncate">
+            <span class="inline-block w-2 h-2 bg-[#E4B044] rounded-full flex-shrink-0 animate-pulse"></span>
+            <span class="lang-en truncate">📍 House 143, Lum Street, Sen Sok, Phnom Penh, Cambodia</span>
+            <span class="lang-kh truncate">📍 ផ្ទះលេខ ១៤៣, ផ្លូវលំ, សង្កាត់អូរបែកក្អម, ខណ្ឌសែនសុខ, រាជធានីភ្នំពេញ, ប្រទេសកម្ពុជា</span>
+        </div>
+        
+        <div class="flex items-center space-x-1 bg-black/20 p-1 rounded-full border border-white/10 text-[10px] sm:text-xs flex-shrink-0 ml-2">
+            <button id="btn-kh" onclick="setLanguage('kh')" class="px-2.5 sm:px-3 py-1 rounded-full transition-all duration-200 font-bold bg-[#E4B044] text-[#1B4332]">
+                ភាសាខ្មែរ
+            </button>
+            <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 sm:px-3 py-1 rounded-full transition-all duration-200 font-bold text-gray-300 hover:text-white">
+                English
+            </button>
+        </div>
+    </div>
+
+<header class="bg-white sticky top-0 z-50 border-b border-gray-100 shadow-sm backdrop-blur-md bg-white/95">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2 sm:space-x-3 group cursor-pointer max-w-[75%] sm:max-w-none">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white rounded-full overflow-hidden flex items-center justify-center shadow-md border border-gray-100 transform group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+                <img src="./src/public/CM02.jpg" alt="CHHING MENG Logo" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col min-w-0">
+                <span class="text-sm sm:text-base md:text-xl lg:text-[24px] font-extrabold text-[#1B4332] tracking-tight group-hover:text-[#2D6A4F] transition-colors truncate sm:whitespace-normal">ឈីង ម៉េង​ អុីមផត​ អិចផត​ ឯ.ក</span>
+                <span class="text-[9px] sm:text-[10px] md:text-[12px] font-bold text-[#E4B044] tracking-wider sm:tracking-widest uppercase -mt-0.5 sm:-mt-1 lang-en truncate">Chhing Meng Import Export Co,. Ltd</span>
+                <span class="text-[9px] sm:text-[10px] md:text-[12px] font-bold text-[#E4B044] tracking-wider sm:tracking-widest uppercase -mt-0.5 sm:-mt-1 lang-kh truncate">Chhing Meng Import Export Co,. Ltd</span>
+            </div>
+        </div>
+        
+        <button onclick="toggleMobileMenu()" class="md:hidden text-[#1B4332] focus:outline-none p-2 text-2xl active:scale-95 transition-transform duration-200">
+            <i id="menu-icon" class="fa-solid fa-bars"></i>
+        </button>
+        
+        <nav class="hidden md:flex items-center space-x-4 lg:space-x-8 text-sm lg:text-[18px] font-bold uppercase tracking-wider text-gray-600">
+            <a href="#home" class="hover:text-[#2D6A4F] transition-colors lang-en">Home</a>
+            <a href="#home" class="hover:text-[#2D6A4F] transition-colors lang-kh">ទំព័រដើម</a>
+
+            <div class="relative group py-2">
+                <a href="#products" class="hover:text-[#2D6A4F] transition-colors flex items-center gap-1 cursor-pointer">
+                    <span class="lang-en">Products</span>
+                    <span class="lang-kh">ផលិតផល</span>
+                    <i class="fa-solid fa-chevron-down text-[11px] transform group-hover:rotate-180 transition-transform duration-200"></i>
+                </a>
+                <div class="absolute top-full left-0 mt-1 w-72 bg-white border border-gray-100 shadow-xl rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2.5 z-50 text-left normal-case">
+                    <a href="#catalog-rabbit" class="block px-5 py-3 hover:bg-emerald-50/40 transition-colors group/item">
+                        <div class="text-[15px] font-black text-gray-800 group-hover/item:text-[#2D6A4F] transition-colors">ជីសញ្ញារូបទន្សាយ</div>
+                        <div class="text-[11px] font-bold text-[#E4B044] tracking-wider uppercase mt-0.5">Rabbit Fertilizer</div>
+                    </a>
+                    <div class="border-t border-gray-50 my-1.5 mx-4"></div>
+                    <a href="#catalog-drone" class="block px-5 py-3 hover:bg-emerald-50/40 transition-colors group/item">
+                        <div class="text-[15px] font-black text-gray-800 group-hover/item:text-[#2D6A4F] transition-colors">ជីសញ្ញាដ្រូន</div>
+                        <div class="text-[11px] font-bold text-[#E4B044] tracking-wider uppercase mt-0.5">Drone Fertilizer</div>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#care" class="hover:text-[#2D6A4F] transition-colors lang-en">Plant Care</a>
+            <a href="#care" class="hover:text-[#2D6A4F] transition-colors lang-kh">ការថែទាំដំណាំ</a>
+
+            <a href="#about" class="hover:text-[#2D6A4F] transition-colors lang-en">Company</a>
+            <a href="#about" class="hover:text-[#2D6A4F] transition-colors lang-kh">ក្រុមហ៊ុនយើងខ្ញុំ</a>
+        </nav>
+
+        <div class="hidden md:flex items-center space-x-2 lg:space-x-3">
+            <a href="tel:087800576" class="inline-flex items-center bg-[#E4B044] hover:bg-[#C99635] text-[#1B4332] text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-full transition-all shadow-sm">
+                <span class="lang-en">Dealer Portal</span><span class="lang-kh">អ្នកចែកចាយ</span>
+            </a>
+            <a href="#contact" class="bg-[#2D6A4F] hover:bg-[#1B4332] text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-full transition-all shadow-sm">
+                <i class="fa-solid fa-location-dot mr-1"></i> <span class="lang-en">Where to Buy</span><span class="lang-kh">ទីតាំងលក់</span>
+            </a>
+        </div>
+
+        <div id="mobile-menu" class="w-full md:hidden flex flex-col space-y-3 overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out">
+            <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-bold text-gray-700 hover:text-[#2D6A4F] py-1 lang-en">Home</a>
+            <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-bold text-gray-700 hover:text-[#2D6A4F] py-1 lang-kh">ទំព័រដើម</a>
+            
+            <div class="border-b border-gray-100 pb-1">
+                <a href="#products" onclick="toggleMobileMenu()" class="text-sm font-bold text-gray-700 hover:text-[#2D6A4F] py-1 lang-en block">Products</a>
+                <a href="#products" onclick="toggleMobileMenu()" class="text-sm font-bold text-gray-700 hover:text-[#2D6A4F] py-1 lang-kh block">ផលិតផល</a>
+            </div>
+            
+            <div class="pl-4 flex flex-col space-y-3 border-l-2 border-emerald-100 py-1 bg-gray-50/70 rounded-r-xl pr-2">
+                <a href="#catalog-rabbit" onclick="toggleMobileMenu()" class="text-xs font-extrabold text-gray-800 hover:text-[#2D6A4F] flex flex-col">
+                    <span>ជីសញ្ញារូបទន្សាយ</span>
+                    <span class="text-[10px] text-gray-400 uppercase font-bold">Rabbit Fertilizer</span>
+                </a>
+                <a href="#catalog-drone" onclick="toggleMobileMenu()" class="text-xs font-extrabold text-gray-800 hover:text-[#2D6A4F] flex flex-col">
+                    <span>ជីសញ្ញាដ្រូន</span>
+                    <span class="text-[10px] text-gray-400 uppercase font-bold">Drone Fertilizer</span>
+                </a>
+            </div>
+            
+            <a href="#care" onclick="toggleMobileMenu()" class="text-sm font-bold text-gray-700 hover:text-[#2D6A4F] py-1 lang-en">Plant Care</a>
+            <a href="#care" onclick="toggleMobileMenu()" class="text-sm font-bold text-gray-700 hover:text-[#2D6A4F] py-1 lang-kh">ការថែទាំដំណាំ</a>
+            
+            <a href="#about" onclick="toggleMobileMenu()" class="text-sm font-bold text-gray-700 hover:text-[#2D6A4F] py-1 lang-en">Company</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="text-sm font-bold text-gray-700 hover:text-[#2D6A4F] py-1 lang-kh">ក្រុមហ៊ុនយើងខ្ញុំ</a>
+            
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="tel:087800576" class="w-full text-center bg-[#E4B044] text-[#1B4332] text-xs font-bold uppercase py-3 rounded-xl shadow-sm">Dealer Portal / អ្នកចែកចាយ</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="w-full text-center bg-[#2D6A4F] text-white text-xs font-bold uppercase py-3 rounded-xl shadow-sm"><i class="fa-solid fa-location-dot mr-1"></i> Where to Buy / ទីតាំងលក់</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <section id="home" class="relative min-h-[75vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden bg-emerald-950">
+    <img src="./src/public/BANNER_CM.jpg" alt="all CM Rabbit brand products" class="slide-bg">
+    <img src="./src/public/BANNER_CM02.jpg" alt="all CM Rabbit brand products" class="slide-bg">
+    <img src="./src/public/BANNER_CM03.jpg" alt="all CM Rabbit brand products" class="slide-bg">
+    <img src="./src/public/BANNER_CM04.jpg" alt="all CM Rabbit brand products" class="slide-bg">
+    
+    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/70 to-transparent z-10"></div>
+    
+    <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-6">
+        <div class="w-full max-w-5xl space-y-6 md:space-y-8 text-center">
+            
+            <!-- <span class="inline-flex items-center bg-white/10 text-white text-[10px] md:text-[45px] font-bold uppercase tracking-widest px-5 py-2 rounded-full backdrop-blur-md border border-white/10 lang-en"> -->
+                <!-- Chhing Meng Import Export Co,.Ltd -->
+            <!-- </span> -->
+            <!-- <span class="inline-flex items-center bg-white/10 text-white text-[12px] md:text-[56px] font-bold tracking-wide px-5 py-2 rounded-full backdrop-blur-md border border-white/10 lang-kh"> -->
+                <!-- ឈីង ម៉េង អុីមផត អិចផត ខូ អិលធីឌី -->
+            <!-- </span> -->
+
+            <h1 class="text-center text-4xl md:text-6xl font-bold text-white tracking-tight font-bold leading-tight drop-shadow-md lang-en">
+                <span class="block">Empowering Fields,</span>
+                <span class="block mt-3 md:mt-4">Maximizing Yields.</span>
+            </h1>
+
+            <h1 class="text-center text-3xl md:text-4xl font-bold text-white tracking-tight font-bold leading-tight drop-shadow-md lang-kh">
+                <span class="block">បង្កើនគុណភាពដីស្រែចំការ និងពង្រីកទិន្នផលខ្ពស់បំផុត</span>
+               
+            </h1>
+
+            <p class="text-center text-xs md:text-xl text-emerald-100 max-w-2xl mx-auto font-light lang-en">
+                Boost your crop yields and productivity with premium, high-purity agricultural nutrition formulas.
+            </p>
+            <p class="text-center text-sm md:text-xl text-emerald-100 max-w-2xl mx-auto font-light lang-kh">
+                បង្កើនទិន្នផល និងផលិតភាពដំណាំរបស់អ្នក ជាមួយរូបមន្តអាហារូបត្ថម្ភកសិកម្មដែលមានគុណភាពខ្ពស់បំផុត។
+            </p>
+
+            <div class="w-16 h-1 bg-[#E4B044] mx-auto rounded-full my-2"></div>
+            
+            <div class="pt-2 text-center">
+                <a href="#products" class="bg-[#E4B044] hover:bg-[#C99635] text-[#1B4332] font-black text-base uppercase tracking-widest px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all inline-block hover:-translate-y-0.5 duration-200 lang-en">
+                    Explore Premium Products
+                </a>
+                <a href="#products" class="bg-[#E4B044] hover:bg-[#C99635] text-[#1B4332] font-black text-base uppercase tracking-widest px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all inline-block hover:-translate-y-0.5 duration-200 lang-kh">
+                    ស្វែងរកផលិតផលល្អៗ
+                </a>
+            </div>
+        </div>
+    </div>
+               //For Product slide Showcase
+    </section> 
+    
+<section class="max-w-7xl mx-auto px-6 -mt-16 z-30 relative reveal">
+    <div class="relative items-center">
+        
+        <button id="slide-prev" class="absolute left-[-20px] top-1/2 -translate-y-1/2 bg-emerald-800 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-emerald-900 transition z-40 border border-emerald-700 font-bold">&lt;</button>
+        <button id="slide-next" class="absolute right-[-20px] top-1/2 -translate-y-1/2 bg-emerald-800 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-emerald-900 transition z-40 border border-emerald-700 font-bold">&gt;</button>
+
+        <div class="overflow-hidden rounded-2xl shadow-xl p-2 bg-emerald-950/20 backdrop-blur-sm">
+            <div id="slider-track" class="flex transition-transform duration-500 ease-in-out gap-6">
+                
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-[#2D6A4F] text-white p-6 md:p-8 rounded-2xl text-center border-b-4 border-emerald-950 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-white/10 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-white/20 relative">
+                            <img src="./src/public/UREA02.jpg" alt="UREA 46-0-0" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#E4B044] text-emerald-950 font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">Urea Pure Nitrogen (46-0-0)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជីអ៊ុយរ៉េ UREA អាសូតខ្ពស់ (46-0-0)</h4>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-en">High-purity nitrogen formula designed to rapidly accelerate vegetative growth.</p>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-kh">រូបមន្តអាសូតសុទ្ធកម្រិតខ្ពស់ ជម្រុញការលូតលាស់មែកធាងបានរហ័ស។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-white/10 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-white/10 border border-white/20 text-white text-xs font-bold py-2.5 rounded-xl hover:bg-white/20 transition-colors uppercase tracking-wider"
+                            data-id="urea" data-img="./src/public/UREA02.jpg" data-weight="50KG/BAG"
+                            data-title-en="Urea Pure Nitrogen (46-0-0)" data-title-kh="ជីអ៊ុយរ៉េ UREA អាសូតខ្ពស់ (46-0-0)"
+                            data-kind-en="High-Concentration Nitrogen Fertilizer" data-kind-kh="ប្រភេទជីអាសូតកម្រិតខ្ពស់ (អ៊ុយរ៉េ)"
+                            data-use-en="Accelerating early vegetative leafy expansion, canopy thickening, and vigorous green color development during primary growth phases."
+                            data-use-kh="ជម្រុញការលូតលាស់មែកធាង ជួយឱ្យស្លឹកលូតលាស់ខៀវស្រងាត់ ធំធាត់លឿន និងពង្រឹងដើមដំណាំក្នុងវគ្គដំបូង។"
+                            data-desc-en="Premium granular urea ideal for rapid growth recovery and building overall crop frame density across rice, corn, and leafy vegetable fields."
+                            data-desc-kh="ជីអ៊ុយរ៉េគ្រាប់ប្រណីតស័ក្តិសមបំផុតសម្រាប់ការស្តារការលូតលាស់បានរហ័ស និងបង្កើតដង់ស៊ីតេដើមដុះលូតលាស់ខ្លាំងខ្លាសម្រាប់ស្រែស្រូវ ចំការពោត និងបន្លែបង្ការ។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-white text-[#1B4332] p-6 md:p-8 rounded-2xl text-center border-b-4 border-[#E4B044] hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-gray-200 relative">
+                            <img src="./src/public/DAP.jpg" alt="DAP 18-46-0" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#2D6A4F] text-white font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">High Purity DAP (18-46-0)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី DAP គុណភាពខ្ពស់ (18-46-0)</h4>
+                        <p class="text-xs text-gray-500 mt-2 lang-en">Critical high-nitrogen, high-phosphorus building complexes.</p>
+                        <p class="text-xs text-gray-500 mt-2 lang-kh">សារធាតុចិញ្ចឹមអាសូត និងផូស្វ័រខ្ពស់ជំនួយឫសដំបូង។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gray-100 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-emerald-50 border border-emerald-200 text-[#1B4332] text-xs font-bold py-2.5 rounded-xl hover:bg-emerald-100 transition-colors uppercase tracking-wider"
+                            data-id="dap" data-img="./src/public/DAP.jpg" data-weight="50KG/BAG"
+                            data-title-en="High Purity DAP (18-46-0)" data-title-kh="ជី DAP គុណភាពខ្ពស់ (18-46-0)"
+                            data-kind-en="Phosphorus-Rich Starter Complex" data-kind-kh="ប្រភេទជីផូស្វ័រជំនួយឫស និងការបែកធាង"
+                            data-use-en="Stimulating aggressive early root system architecture development and establishing robust structural frames during seedling transplanting."
+                            data-use-kh="បណ្តុះប្រព័ន្ធឫសឱ្យរឹងមាំជ្រៅទៅក្នុងដី ទ្រទ្រង់ការបែកធាង និងបង្កើនកម្លាំងធន់របស់កូនដំណាំពេលប្តូរដាំ។"
+                            data-desc-en="An essential high-phosphate compound that fuels energy transfer within young plants, maximizing early tiller counts and robust field establishment."
+                            data-desc-kh="សមាសធាតុផូស្វាតខ្ពស់ដ៏សំខាន់ដែលផ្តល់ថាមពលដល់កូនដំណាំតូចៗ ជួយជម្រុញការបែកដង្គុំបានច្រើន និងការចាក់ឫសយ៉ាងរឹងមាំក្នុងដី។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-[#2D6A4F] text-white p-6 md:p-8 rounded-2xl text-center border-b-4 border-emerald-950 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-white/10 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-white/20 relative">
+                            <img src="./src/public/NPK.jpg" alt="NPK 14-7-35" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#E4B044] text-emerald-950 font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">NPK Complex (14-7-35)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី NPK គ្រាប់ចម្រុះ (14-7-35)</h4>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-en">Premium nutrient ratios designed to strengthen stalks and fill grain stages.</p>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-kh">សមាមាត្រជាតិរ៉ែគុណភាពខ្ពស់ រចនាឡើងដើម្បីពង្រឹងដើម និងជួយឱ្យគ្រាប់ដាក់ពេញ។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-white/10 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-white/10 border border-white/20 text-white text-xs font-bold py-2.5 rounded-xl hover:bg-white/20 transition-colors uppercase tracking-wider"
+                            data-id="npk-14-7-35" data-img="./src/public/NPK.jpg" data-weight="50KG/BAG"
+                            data-title-en="NPK Complex (14-7-35)" data-title-kh="ជី NPK គ្រាប់ចម្រុះ (14-7-35)"
+                            data-kind-en="High-Potassium Crop Nutrition Formula" data-kind-kh="ប្រភេទជីប៉ូតាស្យូមខ្ពស់ ជំនួយទម្ងន់និងគ្រាប់"
+                            data-use-en="Optimizing final grain filling stages, multiplying individual grain density, and boosting heavy starch accumulation in tubers."
+                            data-use-kh="ជួយបំពេញគ្រាប់ឱ្យដាក់ជិតល្អ បង្កើនទម្ងន់គ្រាប់ស្រូវ និងជម្រុញការប្រមូលផ្តុំជាតិម្សៅខ្ពស់ក្នុងមើមដំណាំ។"
+                            data-desc-en="Engineered primarily for mid-to-late seasonal applications when heavy potassium demands are critical for yield weight, flavor profiles, and drought resistance."
+                            data-desc-kh="រចនាឡើងជាពិសេសសម្រាប់ប្រើប្រាស់ក្នុងវគ្គកណ្តាលនិងចុងក្រោយ ដែលជាដំណាក់កាលត្រូវការប៉ូតាស្យូមខ្ពស់បំផុតដើម្បីបង្កើនទម្ងន់ និងគុណភាពផល។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-white text-[#1B4332] p-6 md:p-8 rounded-2xl text-center border-b-4 border-[#E4B044] hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-gray-200 relative">
+                            <img src="./src/public/ORGANIC.jpg" alt="Organic 4-4-4" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#2D6A4F] text-white font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">Organic & Mamigro (4-4-4)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជីសរីរាង្គ និង ជីបំប៉ន (4-4-4)</h4>
+                        <p class="text-xs text-gray-500 mt-2 lang-en">Natural macro-complexes to feed biological soil structures.</p>
+                        <p class="text-xs text-gray-500 mt-2 lang-kh">ការផ្សំបញ្ចូលគ្នារវាងសារធាតុសរីរាង្គធម្មជាតិចិញ្ចឹមដីបានល្អ。</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gray-100 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-emerald-50 border border-emerald-200 text-[#1B4332] text-xs font-bold py-2.5 rounded-xl hover:bg-emerald-100 transition-colors uppercase tracking-wider"
+                            data-id="organic-4-4-4" data-img="./src/public/ORGANIC.jpg" data-weight="50KG/BAG"
+                            data-title-en="Organic & Mamigro (4-4-4)" data-title-kh="ជីសរីរាង្គ និង ជីបំប៉ន (4-4-4)"
+                            data-kind-en="Natural Soil Conditioner & Microbe Activator" data-kind-kh="ប្រភេទជីសរីរាង្គធម្មជាតិ កែលម្អរចនាសម្ព័ន្ធដី"
+                            data-use-en="Rejuvenating compact or tired soils, maintaining optimal organic matter percentages, and safely stabilizing long-term macro-nutrient intake."
+                            data-use-kh="ស្តារដីរឹងខូច ឬដីអស់ជាតិ កែលម្អភាគរយសារធាតុសរីរាង្គក្នុងដី និងជួយឱ្យដំណាំស្រូបយកជីវជាតិបានយូរអង្វែង។"
+                            data-desc-en="An eco-friendly formulation combining certified natural carbon inputs and active biological trace minerals to enhance microbial growth pathways."
+                            data-desc-kh="រូបមន្តធម្មជាតិដែលរួមបញ្ចូលគ្នានូវកាបូនសរីរាង្គ និងសារធាតុរ៉ែដាន ដើម្បីជម្រុញសកម្មភាពអតិសុខុមប្រាណល្អៗដែលជួយបំលែងជីវជាតិក្នុងដី។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-[#2D6A4F] text-white p-6 md:p-8 rounded-2xl text-center border-b-4 border-emerald-950 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-white/10 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-white/20 relative">
+                            <img src="./src/public/NPK15-15-15.jpg" alt="NPK 15-15-15" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#E4B044] text-emerald-950 font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">Balanced NPK (15-15-15)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី NPK តុល្យភាពគ្រាប់ស្មើ (15-15-15)</h4>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-en">All-purpose balanced nutrients ideal for stable growth across all crops.</p>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-kh">សារធាតុចិញ្ចឹមស្មើគ្នាជំនួយដល់ការលូតលាស់ប្រកបដោយលំនឹងគ្រប់ដំណាំ។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-white/10 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-white/10 border border-white/20 text-white text-xs font-bold py-2.5 rounded-xl hover:bg-white/20 transition-colors uppercase tracking-wider"
+                            data-id="npk-15-15-15" data-img="./src/public/NPK15-15-15.jpg" data-weight="50KG/BAG"
+                            data-title-en="Balanced NPK (15-15-15)" data-title-kh="ជី NPK តុល្យភាពគ្រាប់ស្មើ (15-15-15)"
+                            data-kind-en="Homogeneous All-Purpose Macronutrient Compound" data-kind-kh="ប្រភេទជីរូបមន្តស្មើ អាហារូបត្ថម្ភគ្រប់ជ្រុងជ្រោយ"
+                            data-use-en="Providing multi-purpose base maintenance feeding across all crop varieties to sustain steady growth, root health, and balanced leaf expansion simultaneously."
+                            data-use-kh="ផ្តល់ការបំប៉នទូទៅគ្រប់ដំណាក់កាលសម្រាប់គ្រប់មុខដំណាំ ដើម្បីរក្សាការលូតលាស់ប្រកបដោយលំនឹង ទាំងឫស ដើម និងស្លឹក។"
+                            data-desc-en="Featuring an equal split ratio of Nitrogen, Phosphorus, and Potassium, ensuring uniform application and zero nutritional gaps throughout the mid-crop cycle."
+                            data-desc-kh="រូបមន្តស្មើគ្នាឥតខ្ចោះនៃធាតុអាសូត ផូស្វ័រ និងប៉ូតាស្យូម ធានាដល់ការលូតលាស់សម្ងំធ្លា និងការពារកុំឱ្យខ្វះសារធាតុចិញ្ចឹមវគ្គកណ្តាល។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-white text-[#1B4332] p-6 md:p-8 rounded-2xl text-center border-b-4 border-[#E4B044] hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-gray-200 relative">
+                            <img src="./src/public/NPK16-20-0.jpg" alt="NPK16-20-0" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#2D6A4F] text-white font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">Growth Booster NPK (16-20-0)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី NPK ជម្រុញការលូតលាស់ (16-20-0)</h4>
+                        <p class="text-xs text-gray-500 mt-2 lang-en">High nitrogen and phosphate to stimulate early tillering and strong roots.</p>
+                        <p class="text-xs text-gray-500 mt-2 lang-kh">អាសូតនិងផូស្វ័រខ្ពស់ ជម្រុញការបែកដង្គុំដំណាក់កាលដំបូង និងឫសរឹងមាំ។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gray-100 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-emerald-50 border border-emerald-200 text-[#1B4332] text-xs font-bold py-2.5 rounded-xl hover:bg-emerald-100 transition-colors uppercase tracking-wider"
+                            data-id="npk-16-20-0" data-img="./src/public/NPK16-20-0.jpg" data-weight="50KG/BAG"
+                            data-title-en="Growth Booster NPK (16-20-0)" data-title-kh="ជី NPK ជម្រុញការលូតលាស់ (16-20-0)"
+                            data-kind-en="Ammonium Phosphate-Sulfate Compound" data-kind-kh="ប្រភេទជីជម្រុញការលូតលាស់ និងបែកដង្គុំ"
+                            data-use-en="Accelerating early tillering stages in rice fields, increasing stalk framework diameter, and fueling fast greening behaviors."
+                            data-use-kh="ជម្រុញការបែកដង្គុំបានលឿនក្នុងស្រែស្រូវ បង្កើនទំហំមុខកាត់ដើមដំណាំ និងជួយឱ្យស្លឹកលូតលាស់បៃតងខ្ចីឆាប់រហ័ស។"
+                            data-desc-en="Specially enriched with high structural phosphorus concentrations combined with top-tier starter nitrogen to build massive structural yields before flowering phases."
+                            data-desc-kh="សំបូរទៅដោយផូស្វ័ររចនាសម្ព័ន្ធខ្ពស់ រួមផ្សំជាមួយអាសូតដំបូង ដើម្បីបង្កើតគ្រោងឆ្អឹងដំណាំឱ្យធំមាំមួនមុនដំណាក់កាលចេញផ្កា។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-[#2D6A4F] text-white p-6 md:p-8 rounded-2xl text-center border-b-4 border-emerald-950 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-white/10 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-white/20 relative">
+                            <img src="./src/public/NPK20-20-15.jpg" alt="NPK 20-20-15" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#E4B044] text-emerald-950 font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">Premium Max NPK (20-20-15)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី NPK រូបមន្តពិសេសលំដាប់ខ្ពស់ (20-20-15)</h4>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-en">Advanced nutrient compound providing intense nourishment for maximum yields.</p>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-kh">សមាសធាតុជីវជាតិកម្រិតខ្ពស់ ផ្តល់ការបំប៉នខ្លាំងក្លាដើម្បីទិន្នផលអតិបរមា។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-white/10 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-white/10 border border-white/20 text-white text-xs font-bold py-2.5 rounded-xl hover:bg-white/20 transition-colors uppercase tracking-wider"
+                            data-id="npk-20-20-15" data-img="./src/public/NPK20-20-15.jpg" data-weight="50KG/BAG"
+                            data-title-en="Premium Max NPK (20-20-15)" data-title-kh="ជី NPK រូបមន្តពិសេសលំដាប់ខ្ពស់ (20-20-15)"
+                            data-kind-en="High-Density High-Analysis Nutrient Matrix" data-kind-kh="ប្រភេទជីលំដាប់ខ្ពស់ សារធាតុចិញ្ចឹមកំហាប់ខ្ពស់"
+                            data-use-en="Delivering high-energy feeding bursts to multi-crop profiles during crucial nutrient transition stages to extract peak potential yields."
+                            data-use-kh="ផ្តល់នូវការបំប៉នថាមពលខ្ពស់បំផុតក្នុងដំណាក់កាលផ្លាស់ប្តូរជីវជាតិសំខាន់ៗ ដើម្បីទាញយកទិន្នផលខ្ពស់បំផុតពីដំណាំរបស់អ្នក។"
+                            data-desc-en="An advanced, concentrated compound layout meticulously manufactured with superior quality raw elements for professional farm managers demanding extreme efficiency."
+                            data-desc-kh="សមាសធាតុផ្សំកំហាប់ខ្ពស់កម្រិតខ្ពស់ ផលិតឡើងយ៉ាងផ្ចិតផ្ចង់ជាមួយវត្ថុធាតុដើមគុណភាពខ្ពស់បំផុត សម្រាប់អ្នកគ្រប់គ្រងកសិដ្ឋានអាជីព។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-white text-[#1B4332] p-6 md:p-8 rounded-2xl text-center border-b-4 border-[#E4B044] hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-gray-200 relative">
+                            <img src="./src/public/NPK15-5-25.jpg" alt="NPK 15-5-20" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#2D6A4F] text-white font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">Potassium Rich NPK (15-5-25)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី NPK ប៉ូតាស្យូមខ្ពស់ (15-5-25)</h4>
+                        <p class="text-xs text-gray-500 mt-2 lang-en">Excellent formula optimized for weight enhancement and fruit development.</p>
+                        <p class="text-xs text-gray-500 mt-2 lang-kh">រូបមន្តដ៏ប្រសើរសម្រាប់បង្កើនទម្ងន់ផ្លែ និងជួយបំពេញគ្រាប់ឱ្យដាក់ជិតល្អ។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gray-100 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-emerald-50 border border-emerald-200 text-[#1B4332] text-xs font-bold py-2.5 rounded-xl hover:bg-emerald-100 transition-colors uppercase tracking-wider"
+                            data-id="npk-15-5-25" data-img="./src/public/NPK15-5-25.jpg" data-weight="50KG/BAG"
+                            data-title-en="Potassium Rich NPK (15-5-25)" data-title-kh="ជី NPK ប៉ូតាស្យូមខ្ពស់ (15-5-25)"
+                            data-kind-en="Fruit & Bulb Maximizing Compound" data-kind-kh="ប្រភេទជីប៉ូតាស្យូមខ្ពស់ ជម្រុញទម្ងន់និងសាច់ផ្លែ"
+                            data-use-en="Maximizing fruit circumference density, filling rice grains, and driving higher sugar conversion profiles inside commercial orchards."
+                            data-use-kh="បង្កើនទំហំនិងសាច់ផ្លែ ជួយបំពេញគ្រាប់ស្រូវឱ្យដាក់ជិតពេញថ្លោស និងជម្រុញការបំប្លែងជាតិស្ករក្នុងចំការឈើហូបផ្លែ។"
+                            data-desc-en="Tailored precisely for application during early fruiting, heading, or seed setting stages to directly affect overall kernel and crop market values."
+                            data-desc-kh="កែច្នៃយ៉ាងជាក់លាក់សម្រាប់ប្រើប្រាស់ក្នុងដំណាក់កាលក្តាប់ផ្លែដំបូង ចេញកួរ ឬបង្កើតគ្រាប់ ដើម្បីជម្រុញតម្លៃទីផ្សារសរុបនៃកសិផល។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-[#2D6A4F] text-white p-6 md:p-8 rounded-2xl text-center border-b-4 border-emerald-950 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-white/10 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-white/20 relative">
+                            <img src="./src/public/ORG8-8-8.jpg" alt="NPK 16-16-8" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#E4B044] text-emerald-950 font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">Crop Support ORG (8-8-8)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី ORG ទ្រទ្រង់ដំណាំ (8-8-8)</h4>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-en">Great standard maintenance blend supporting consistent mid-stage crop nutrition.</p>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-kh">ល្បាយថែទាំស្តង់ដារដ៏ល្អ ជួយទ្រទ្រង់អាហារូបត្ថម្ភដំណាំវគ្គកណ្តាលបានយ៉ាងថេរ។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-white/10 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-white/10 border border-white/20 text-white text-xs font-bold py-2.5 rounded-xl hover:bg-white/20 transition-colors uppercase tracking-wider"
+                            data-id="org-8-8-8" data-img="./src/public/ORG8-8-8.jpg" data-weight="50KG/BAG"
+                            data-title-en="Crop Support ORG (8-8-8)" data-title-kh="ជី NPK ទ្រទ្រង់ដំណាំ (8-8-8)"
+                            data-kind-en="Sustained Mid-Stage Development Blend" data-kind-kh="ប្រភេទជីរូបមន្តទ្រទ្រង់ និងថែទាំសាច់ដំណាំ"
+                            data-use-en="Maintaining standard balanced vegetative and trunk architecture development across medium-term cash crops."
+                            data-use-kh="រក្សាការលូតលាស់តុល្យភាពស្តង់ដារនៃផ្នែកមែកធាង និងរចនាសម្ព័ន្ធដើមសម្រាប់មុខដំណាំសេដ្ឋកិច្ចរយៈពេលមធ្យម។"
+                            data-desc-en="A highly reliable and traditional farm staple providing dependable performance across varied environmental terrain profiles without nutritional spiking."
+                            data-desc-kh="ជីរូបមន្តពេញនិយម និងគួរឱ្យទុកចិត្តបំផុត ផ្តល់នូវលទ្ធផលថេរទូទាំងផ្ទៃដីដាំដុះផ្សេងៗគ្នា ដោយមិនបង្កការប៉ះពាល់ដល់ឫសដំណាំ។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-white text-[#1B4332] p-6 md:p-8 rounded-2xl text-center border-b-4 border-[#E4B044] hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-gray-200 relative">
+                            <img src="./src/public/NPK16-16-16.jpg" alt="NPK 16-16-16" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#2D6A4F] text-white font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">Leaf & Root NPK (16-16-16)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី NPK ជំនួយស្លឹកនិងឫស (16-16-16)</h4>
+                        <p class="text-xs text-gray-500 mt-2 lang-en">Enriched nitrogen blend built for lush green canopy structure development.</p>
+                        <p class="text-xs text-gray-500 mt-2 lang-kh">ល្បាយអាសូតបន្ថែមពិសេស បង្កើតឡើងសម្រាប់ពង្រីកស្លឹកឱ្យខៀវក្រាស់ស្អាត។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gray-100 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-emerald-50 border border-emerald-200 text-[#1B4332] text-xs font-bold py-2.5 rounded-xl hover:bg-emerald-100 transition-colors uppercase tracking-wider"
+                            data-id="npk-16-16-16" data-img="./src/public/NPK16-16-16.jpg" data-weight="50KG/BAG"
+                            data-title-en="Leaf & Root NPK (16-16-16)" data-title-kh="ជី NPK ជំនួយស្លឹកនិងឫស (16-16-16)"
+                            data-kind-en="High-Nitrogen Growth Accelerator Matrix" data-kind-kh="ប្រភេទជីអាសូតខ្ពស់ ជម្រុញស្លឹកខៀវក្រាស់"
+                            data-use-en="Accelerating extensive green canopy coverage, thick chlorophyll formulation, and secondary structural root system anchoring."
+                            data-use-kh="ពង្រឹងការគ្របដណ្តប់នៃស្លឹកបៃតង បង្កើតក្លរ៉ូភីលក្រាស់ៗ និងជួយឱ្យប្រព័ន្ធឫសបន្ទាប់បន្សំបោះយុថ្កាជ្រៅក្នុងដី។"
+                            data-desc-en="Formulated with balanced secondary phosphorus and potassium ratios to maximize structural foliage mass without thinning vegetative stem safety thresholds."
+                            data-desc-kh="ផ្សំឡើងជាមួយសមាមាត្រតុល្យភាពនៃផូស្វ័រ និងប៉ូតាស្យូមបន្ទាប់បន្សំ ដើម្បីបង្កើនម៉ាស់ស្លឹកខ្ពស់បំផុត ដោយមិនធ្វើឱ្យដើមដំណាំទន់ជ្រាយ។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-[#2D6A4F] text-white p-6 md:p-8 rounded-2xl text-center border-b-4 border-emerald-950 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-white/10 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-white/20 relative">
+                            <img src="./src/public/NPK16-16-8.jpg" alt="NPK 16-16-8" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#E4B044] text-emerald-950 font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">Grain & Fruit NPK (16-16-8)</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី NPK ដាក់គ្រាប់និងផ្លែ (16-16-8)</h4>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-en">High potassium complex engineered specifically for high starch/sugar generation.</p>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-kh">សមាសធាតុប៉ូតាស្យូមខ្ពស់ រចនាជាពិសេសសម្រាប់ជម្រុញម្សៅ និងស្ករក្នុងទិន្នផល។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-white/10 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-white/10 border border-white/20 text-white text-xs font-bold py-2.5 rounded-xl hover:bg-white/20 transition-colors uppercase tracking-wider"
+                            data-id="npk-16-16-8" data-img="./src/public/NPK16-16-8.jpg" data-weight="50KG/BAG"
+                            data-title-en="Grain & Fruit NPK (16-16-8)" data-title-kh="ជី NPK ដាក់គ្រាប់និងផ្លែ (16-16-8)"
+                            data-kind-en="Premium Finishing High-Potassium Compound" data-kind-kh="ប្រភេទជីប៉ូតាស្យូមខ្ពស់ វគ្គបញ្ចប់សម្រាប់ដាក់គ្រាប់"
+                            data-use-en="Maximizing complex carbohydrate translocation inside plants to rapidly build dry matter density, heavy grain weights, and fruit quality traits."
+                            data-use-kh="ជម្រុញការបញ្ជូនកាបូអ៊ីដ្រាតក្នុងរុក្ខជាតិ ដើម្បីបង្កើតម៉ាស់ស្ងួតបានលឿន បង្កើនទម្ងន់គ្រាប់ធ្ងន់ និងគុណភាពផ្លែឈើល្អឯក។"
+                            data-desc-en="The ideal finishing compound optimized extensively for late stage treatments to unlock ultimate potential crop tonnage and aesthetic market appeal."
+                            data-desc-kh="ជីវគ្គបញ្ចប់ដ៏ល្អបំផុតដែលត្រូវបានកែលម្អសម្រាប់ប្រើប្រាស់ចុងក្រោយ ដើម្បីបើកបង្ហាញនូវទម្ងន់ផលអតិបរមា និងរូបរាងកសិផលស្អាតទាក់ទាញទីផ្សារ។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-white text-[#1B4332] p-6 md:p-8 rounded-2xl text-center border-b-4 border-[#E4B044] hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-gray-200 relative">
+                            <img src="./src/public/NPK20-20-15.jpg" alt="NPK20-20-15" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#2D6A4F] text-white font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">NPK20-20-15</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី NPK20-20-15</h4>
+                        <p class="text-xs text-gray-500 mt-2 lang-en">Enhanced humic acid formulas to activate old locked nutrients in tired crop soils.</p>
+                        <p class="text-xs text-gray-500 mt-2 lang-kh">រូបមន្តអាស៊ីតហ៊្យូមិកបន្ថែម ជួយដាស់សារធាតុចិញ្ចឹមដែលកកស្ទះក្នុងដីឱ្យដំណើរការឡើងវិញ។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gray-100 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-emerald-50 border border-emerald-200 text-[#1B4332] text-xs font-bold py-2.5 rounded-xl hover:bg-emerald-100 transition-colors uppercase tracking-wider"
+                            data-id="npk-20-20-15" data-img="./src/public/NPK20-20-15.jpg" data-weight="50KG/BAG"
+                            data-title-en="Premium NPK" data-title-kh="ជី NPK20-20-15"
+                            data-kind-en="NPK & Bio-Stimulant Soil Complex" data-kind-kh="ជី NPK20-20-15"
+                            data-use-en="Unlocking bounded or blocked soil nutrients from consecutive chemical fertilizations, improving overall Cation Exchange Capacity (CEC), and maintaining fine soil moisture retention parameters."
+                            data-use-kh="ដាស់និងបំលែងសារធាតុចិញ្ចឹមដែលកកស្ទះក្នុងដីពីការប្រើគីមីយូរឆ្នាំ កែលម្អសមត្ថភាពប្តូរអ៊ីយ៉ុងដី (CEC) និងរក្សាសំណើមដីបានយ៉ាងល្អ។"
+                            data-desc-en="Enriched with specialized humates and organic compound extracts that rebuild degraded structural topsoils, promoting rapid feeder root dispersion."
+                            data-desc-kh="សំបូរទៅដោយធាតុហ៊្យូមេត និងសារធាតុចង់ភ្ជាប់សរីរាង្គពិសេសៗដែលជួយកសាងស្រទាប់ដីខាងលើឡើងវិញ ជម្រុញឱ្យឫសស្រូបជីវជាតិបែកបានលឿន។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-[#2D6A4F] text-white p-6 md:p-8 rounded-2xl text-center border-b-4 border-emerald-950 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-white/10 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-white/20 relative">
+                            <img src="./src/public/ORG10-10-10.jpg" alt="Bio Organic" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#E4B044] text-emerald-950 font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">10-10-10</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី 10-10-10</h4>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-en">Rich microbial base structure compound designed to completely restore poor earth profiles.</p>
+                        <p class="text-xs text-emerald-100/80 mt-2 lang-kh">សមាសធាតុអតិសុខុមប្រាណដីដ៏សំបូរបែប រចនាឡើងដើម្បីស្តារនិងកែលម្អគុណភាពដីខ្សោះ។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-white/10 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-white/10 border border-white/20 text-white text-xs font-bold py-2.5 rounded-xl hover:bg-white/20 transition-colors uppercase tracking-wider"
+                            data-id="org-10-10-10" data-img="./src/public/ORG10-10-10.jpg" data-weight="50KG/BAG"
+                            data-title-en="Bio-Organic Compost" data-title-kh="ជីកំប៉ុស្តជីវសរីរាង្គធម្មជាតិ"
+                            data-kind-en="Fully Matured Biological Organic Matter" data-kind-kh="ប្រភេទជីកំប៉ុស្តជីវសរីរាង្គ កែច្នៃម៉ត់ល្អ"
+                            data-use-en="Completely restoring depleted or sandy ground layers, establishing healthy natural humus layers, and introducing massive constructive microflora populations."
+                            data-use-kh="ស្តារស្រទាប់ដីខ្សោះឬដីខ្សាច់ឱ្យមានជីវជាតិឡើងវិញ បង្កើតស្រទាប់ដីមបុសធម្មជាតិ និងបង្កើនអតិសុខុមប្រាណល្អៗជំនួយដី។"
+                            data-desc-en="Meticulously aged and safe compost compound providing gentle base feeding while entirely eliminating harmful pathogens or volatile weed seed risks."
+                            data-desc-kh="ជីកំប៉ុស្តដែលឆ្លងកាត់ការផ្អាប់ទុកយ៉ាងត្រឹមត្រូវ សុវត្ថិភាព ផ្តល់ការបំប៉នដីថ្នមៗ ដោយគ្មានហានិភ័យមេរោគចង្រៃ ឬគ្រាប់ស្មៅចង្រៃឡើយ។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 bg-white text-[#1B4332] p-6 md:p-8 rounded-2xl text-center border-b-4 border-[#E4B044] hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 overflow-hidden shadow-inner border border-gray-200 relative">
+                            <img src="./src/public/ORG12-0-1.jpg" alt="ORG12-0-1" class="object-contain h-full w-full transform scale-110 transition-transform duration-300 group-hover:scale-115">
+                            <span class="absolute top-2 right-2 bg-[#2D6A4F] text-white font-bold text-xs px-2 py-1 rounded-md shadow-sm z-10">50KG/BAG</span>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-en">12-0-1</h4>
+                        <h4 class="font-bold text-sm uppercase tracking-wider lang-kh">ជី 12-0-1</h4>
+                        <p class="text-xs text-gray-500 mt-2 lang-en">High phosphorus organic raw alternative element optimizing eco-friendly blooming setups.</p>
+                        <p class="text-xs text-gray-500 mt-2 lang-kh">ជីធម្មជាតិជាតិផូស្វ័រខ្ពស់ ជម្រុញការផ្ការីកលូតលាស់ដោយសុវត្ថិភាពនិងធម្មជាតិពិតៗ។</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gray-100 flex flex-col gap-2">
+                        <button class="open-detail-btn w-full bg-emerald-50 border border-emerald-200 text-[#1B4332] text-xs font-bold py-2.5 rounded-xl hover:bg-emerald-100 transition-colors uppercase tracking-wider"
+                            data-id="org-12-0-1" data-img="./src/public/ORG12-0-1.jpg" data-weight="50KG/BAG"
+                            data-title-en="Natural Bat Guano Mix" data-title-kh="ជីបំប៉នគុណភាពដី"
+                            data-kind-en="Premium High-Phosphorus Organic Fertilizer" data-kind-kh="ប្រភេទជីបំប៉នដី អាស៊ូតធម្មជាតិខ្ពស់"
+                            data-use-en="Sustaining natural flower initiation setup, expanding root clusters safely, and enhancing fruit brix sweet content profiles organically."
+                            data-use-kh="ជម្រុញការបង្កើតផ្កាធម្មជាតិ ពង្រីកបណ្តុំឫសដំណាំដោយសុវត្ថិភាព និងជួយឱ្យផ្លែឈើមានរសជាតិផ្អែមឆ្ងាញ់តាមបែបធម្មជាតិពិតៗ។"
+                            data-desc-en="Collected from elite organic caves and balanced naturally to provide excellent long-term macro and micro nutrient soil availability without burning delicate crops."
+                            data-desc-kh="ប្រមូលពីរូងភ្នំធម្មជាតិពិតៗ និងកែច្នៃឱ្យមានតុល្យភាព ដើម្បីផ្តល់នូវជីវជាតិទូទៅបានយូរអង្វែង ដោយមិនបង្កការរលាកដល់ឫសដំណាំស្រទន់ឡើយ។"
+                            data-tel="tel:+85587800576" data-tg="https://t.me/Lida_CM">
+                            <span class="lang-en">🔎 View Details</span><span class="lang-kh">🔎 មើលព័ត៌មានលម្អិត</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="product-detail-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4 overflow-y-auto">
+    <div class="bg-gradient-to-b from-[#1B4332] to-[#0D261C] w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl relative text-white border border-emerald-800 flex flex-col md:flex-row my-auto">
+        
+        <button id="close-modal-btn" class="absolute top-4 right-4 text-white/70 hover:text-white bg-black/20 hover:bg-black/40 w-10 h-10 rounded-full flex items-center justify-center transition-colors z-30 font-bold text-xl">&times;</button>
+        
+        <div class="w-full md:w-5/12 bg-white/5 p-6 flex flex-col items-center justify-center relative border-b md:border-b-0 md:border-r border-emerald-800/50">
+            <span id="modal-weight-badge" class="absolute top-4 left-4 bg-[#E4B044] text-emerald-950 font-black text-xs px-3 py-1.5 rounded-full shadow-md uppercase tracking-wider">50KG/BAG</span>
+            <div class="w-full h-64 md:h-80 flex items-center justify-center p-4 bg-white/10 rounded-2xl border border-white/10 shadow-inner overflow-hidden">
+                <img id="modal-img" src="" alt="Active Product Render" class="object-contain h-full w-full transform scale-105">
+            </div>
+        </div>
+
+        <div class="w-full md:w-7/12 p-6 md:p-8 flex flex-col justify-between space-y-6">
+            <div>
+                <h2 id="modal-title-en" class="text-2xl font-black text-white uppercase tracking-tight lang-en">Formula Title</h2>
+                <h2 id="modal-title-kh" class="text-xl font-bold text-[#E4B044] tracking-wide lang-kh">ឈ្មោះផលិតផលកសិកម្ម</h2>
+                
+                <hr class="border-emerald-800/60 my-4">
+                
+                <div class="space-y-4">
+                    <div>
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-emerald-400 block mb-1">
+                            <span class="lang-en">🧬 Kind of Product</span><span class="lang-kh">🧬 ប្រភេទផលិតផល</span>
+                        </span>
+                        <p id="modal-kind-en" class="text-sm font-semibold text-white/90 lang-en"></p>
+                        <p id="modal-kind-kh" class="text-sm font-medium text-white/90 lang-kh"></p>
+                    </div>
+
+                    <div>
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-emerald-400 block mb-1">
+                            <span class="lang-en">🌱 Used For / Application Scenarios</span><span class="lang-kh">🌱 ប្រើប្រាស់សម្រាប់ / ដំណាក់កាលប្រើប្រាស់</span>
+                        </span>
+                        <p id="modal-use-en" class="text-xs leading-relaxed text-emerald-100/90 lang-en"></p>
+                        <p id="modal-use-kh" class="text-sm leading-relaxed text-emerald-100/90 lang-kh"></p>
+                    </div>
+
+                    <div>
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-emerald-400 block mb-1">
+                            <span class="lang-en">📝 Complete Technical Description</span><span class="lang-kh">📝 ព័ត៌មានលម្អិតបន្ថែមពីគុណភាព</span>
+                        </span>
+                        <p id="modal-desc-en" class="text-xs leading-relaxed text-emerald-200/80 lang-en"></p>
+                        <p id="modal-desc-kh" class="text-xs leading-relaxed text-emerald-200/80 lang-kh"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-4 border-t border-emerald-800/60">
+                <span class="text-[11px] uppercase font-bold tracking-widest text-emerald-400 block mb-2">
+                    <span class="lang-en">📞 Connect & Order Instantly</span><span class="lang-kh">📞 ទំនាក់ទំនងបញ្ជាទិញផ្ទាល់</span>
+                </span>
+                <div class="grid grid-cols-2 gap-3">
+                    <a id="modal-tel-link" href="#" class="bg-[#E4B044] hover:bg-[#C99635] text-[#1B4332] font-black text-center text-xs py-3 rounded-xl transition-all uppercase tracking-wider flex items-center justify-center gap-2 shadow-md">
+                        <span class="lang-en">Phone Hotline</span><span class="lang-kh">ខលកុម្ម៉ង់ផ្ទាល់</span>
+                    </a>
+                    <a id="modal-tg-link" href="#" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-bold text-center text-xs py-3 rounded-xl transition-all uppercase tracking-wider flex items-center justify-center gap-2 shadow-md">
+                        <span class="lang-en">Telegram Channel</span><span class="lang-kh">ឆាតតាមតេឡេក្រាម</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="pt-2">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-500 block mb-2">
+                    <span class="lang-en">🔄 Related High-Quality Formulations</span><span class="lang-kh">🔄 ផលិតផលពាក់ព័ន្ធផ្សេងទៀត</span>
+                </span>
+                <div id="modal-related-container" class="flex gap-3 overflow-x-auto pb-1 scrollbar-thin">
+                    </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</section> 
+
+         <!-- product category -->
+           
+ <section id="products" class="py-24 px-4 md:px-6 bg-gradient-to-b from-[#FDFDFB] to-[#F5F7F5]">
+    <div class="max-w-7xl mx-auto">
+        
+        <div id="view-brands" class="workspace-view">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-[25px] font-bold text-[#2D6A4F] uppercase tracking-widest block mb-2 lang-en">Select a Brand</span>
+                <span class="text-[25px] font-bold text-[#2D6A4F] uppercase tracking-widest block mb-2 lang-kh">ជ្រើសរើសម៉ាកផលិតផល</span>
+                <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight lang-en">Advanced Agricultural Solutions</h3>
+                <h3 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight lang-kh">ដំណោះស្រាយកសិកម្មកម្រិតខ្ពស់</h3>
+                <div class="w-12 h-1 bg-[#2D6A4F] mx-auto rounded mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
+                <div onclick="navigateToRoute('catalog-rabbit')" class="bg-white rounded-3xl shadow-md hover:shadow-2xl border border-gray-100 p-6 text-center group hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between cursor-pointer">
+                    <div>
+                        <div class="w-full h-64 rounded-2xl overflow-hidden mb-6 bg-[#FDFDFB] relative shadow-inner">
+                            <img src="./src/public/UREA02.jpg" alt="Rabbit Fertilizer" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h4 class="font-extrabold text-2xl text-gray-800 tracking-tight mb-1">ជីម៉ាកទន្សាយ [Rabbit Fertilizer]</h4>
+                        <p class="text-sm font-semibold text-[#2D6A4F] mb-4">Premium Heritage Formulas</p>
+                        <p class="text-xs text-gray-500 leading-relaxed px-4 lang-en">Time-tested nutritional composites maximizing classic crop performance and structural plant safety metrics.</p>
+                        <p class="text-xs text-gray-500 leading-relaxed px-4 lang-kh">រូបមន្តសារធាតុចិញ្ចឹមដែលឆ្លងកាត់ការពិសោធន៍ច្បាស់លាស់ ជួយបង្កើនទិន្នផលខ្ពស់ និងធានាសុវត្ថិភាពដំណាំ។</p>
+                    </div>
+                    <div class="mt-8 bg-emerald-50/50 -mx-6 -mb-6 p-4 rounded-b-3xl text-center text-sm font-bold text-[#2D6A4F] uppercase tracking-wider group-hover:bg-[#2D6A4F] group-hover:text-white transition-all duration-300">
+                        <span class="lang-en">Explore Catalog <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        <span class="lang-kh">មើលកាតាឡុកផលិតផល <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                </div>
+
+                <div onclick="navigateToRoute('catalog-drone')" class="bg-white rounded-3xl shadow-md hover:shadow-2xl border border-gray-100 p-6 text-center group hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between cursor-pointer">
+                    <div>
+                        <div class="w-full h-64 rounded-2xl overflow-hidden mb-6 bg-[#FDFDFB] relative shadow-inner">
+                            <img src="./src/public/NPK20-20-15.jpg" alt="Drone Fertilizer" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h4 class="font-extrabold text-2xl text-gray-800 tracking-tight mb-1">ជីម៉ាកដ្រូន [Drone Fertilizer]</h4>
+                        <p class="text-sm font-semibold text-[#2D6A4F] mb-4">Smart Precision Nutrition</p>
+                        <p class="text-xs text-gray-500 leading-relaxed px-4 lang-en">Next-generation hyper-soluble micro-granular complexes optimized for modern drone spraying applications.</p>
+                        <p class="text-xs text-gray-500 leading-relaxed px-4 lang-kh">បច្ចេកវិទ្យាជីរលាយលឿនកម្រិតខ្ពស់ ផ្សំឡើងយ៉ាងពិសេសសម្រួលដល់ការបាញ់តាមដ្រូនកសិកម្មឆ្លាតវៃ។</p>
+                    </div>
+                    <div class="mt-8 bg-emerald-50/50 -mx-6 -mb-6 p-4 rounded-b-3xl text-center text-sm font-bold text-[#2D6A4F] uppercase tracking-wider group-hover:bg-[#2D6A4F] group-hover:text-white transition-all duration-300">
+                        <span class="lang-en">Explore Catalog <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        <span class="lang-kh">មើលកាតាឡុកផលិតផល <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="view-list" class="workspace-view hidden">
+            <div class="flex items-center justify-between border-b border-gray-200 pb-6 mb-8">
+                <button onclick="navigateToRoute('brands')" class="flex items-center text-xs font-bold text-gray-500 hover:text-gray-800 transition-colors">
+                    <i class="fa-solid fa-arrow-left mr-2"></i> Back to Brands
+                </button>
+                <h2 id="catalog-brand-title" class="text-xl font-black text-gray-900 tracking-tight uppercase"></h2>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-8 flex flex-col md:flex-row items-center gap-4 justify-between">
+                <div class="relative w-full md:w-1/3">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                        <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                    </span>
+                    <input type="text" id="spa-search" oninput="handleSearchTypingInput()" placeholder="Search products..." class="w-full pl-9 pr-4 py-2 text-xs bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2D6A4F] focus:bg-white transition-all">
+                </div>
+                <div class="flex flex-wrap items-center gap-2 w-full md:w-auto justify-start md:justify-end">
+                    <button onclick="setSpaCategory('all')" id="btn-spa-all" class="spa-filter-btn px-4 py-1.5 rounded-xl text-xs font-bold transition-all bg-[#2D6A4F] text-white">All Products</button>
+                    <button onclick="setSpaCategory('Urea')" id="btn-spa-Urea" class="spa-filter-btn px-4 py-1.5 rounded-xl text-xs font-bold transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">Urea</button>
+                    <button onclick="setSpaCategory('NPK')" id="btn-spa-NPK" class="spa-filter-btn px-4 py-1.5 rounded-xl text-xs font-bold transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">NPK Complex</button>
+                    <button onclick="setSpaCategory('DAP')" id="btn-spa-DAP" class="spa-filter-btn px-4 py-1.5 rounded-xl text-xs font-bold transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">DAP Foundation</button>
+                    <button onclick="setSpaCategory('Organic')" id="btn-spa-Organic" class="spa-filter-btn px-4 py-1.5 rounded-xl text-xs font-bold transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">Organic</button>
+                </div>
+            </div>
+
+            <div id="spa-grid-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+
+            <div id="spa-pagination-container" class="flex justify-center items-center gap-2 mt-12 border-t border-gray-100 pt-8"></div>
+        </div>
+
+       <!-- ISOLATED DETAIL DATASHEET VIEW -->
+<div id="view-detail" class="workspace-view hidden">
+    <div class="flex items-center justify-between border-b border-gray-200 pb-6 mb-8">
+        <button onclick="navigateBackToList()" class="flex items-center text-xs font-bold text-[#2D6A4F] hover:text-[#1B4332] transition-colors">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Back to Product List
+        </button>
+        <span id="detail-brand-badge" class="text-xs font-bold text-gray-400 uppercase tracking-widest"></span>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-white rounded-3xl p-6 md:p-10 shadow-sm border border-gray-100">
+        <!-- Left Column: Images -->
+        <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-full h-80 rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 shadow-inner">
+                <img id="detail-main-img" src="" class="w-full h-full object-cover">
+            </div>
+            <div id="detail-gallery-row" class="grid grid-cols-6 gap-2"></div>
+        </div>
+        
+        <!-- Right Column: Specifications & Actions -->
+        <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+                <span id="detail-category-badge" class="bg-emerald-50 text-[#2D6A4F] text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full inline-block mb-3"></span>
+                <h1 id="detail-title-kh" class="text-2xl font-black text-gray-800 mb-1"></h1>
+                <h2 id="detail-title-en" class="text-xs font-bold text-[#2D6A4F] uppercase tracking-wider mb-6"></h2>
+                
+                <div class="border-t border-gray-100 pt-3 space-y-2 text-xs md:text-sm">
+                    <div class="grid grid-cols-3 py-1.5 border-b border-gray-50"><span class="font-semibold text-gray-400">Type of fertilizer</span><span id="s-type-en" class="col-span-2 text-gray-800 font-medium"></span></div>
+                    <div class="grid grid-cols-3 py-1.5 border-b border-gray-50"><span class="font-semibold text-gray-400">Trade Name</span><span id="s-trade" class="col-span-2 text-gray-800 font-medium"></span></div>
+                    <div class="grid grid-cols-3 py-1.5 border-b border-gray-50"><span class="font-semibold text-gray-400">Common Name</span><span id="s-common" class="col-span-2 text-gray-800 font-medium"></span></div>
+                    <div class="grid grid-cols-3 py-1.5 border-b border-gray-50"><span class="font-semibold text-gray-400">ប្រភេទ</span><span id="s-type-kh" class="col-span-2 text-gray-800 font-medium"></span></div>
+                    <div class="grid grid-cols-3 py-1.5 border-b border-gray-50"><span class="font-semibold text-gray-400">ទម្ងន់</span><span id="s-weight" class="col-span-2 text-gray-800 font-medium"></span></div>
+                    <div class="grid grid-cols-3 py-1.5 border-b border-gray-50"><span class="font-semibold text-gray-400">លេខបញ្ជិកា</span><span id="s-reg" class="col-span-2 text-gray-800 font-medium"></span></div>
+                </div>
+            </div>
+
+            <!-- Description & Direct Phone Call CTA -->
+            <div class="mt-6 space-y-4">
+                <p id="detail-desc" class="text-xs text-gray-500 bg-gray-50 p-4 rounded-xl border border-gray-100 leading-relaxed"></p>
+                
+                <!-- Integrated Mobile Ordering Action Button -->
+                <div id="datasheet-cta-container" class="pt-2">
+                    <a href="tel:087800578" class="inline-flex items-center justify-center gap-2.5 bg-[#E4B044] hover:bg-[#C99635] text-[#1B4332] text-sm font-black tracking-wide px-6 py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md active:scale-95 w-full sm:w-auto min-w-[240px]">
+                        <i class="fa-solid fa-phone text-xs animate-pulse"></i>
+                        <span>ទំនាក់ទំនង​ | 087 800 578</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="mt-8 bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <h4 class="font-extrabold text-gray-800 text-sm mb-4 uppercase tracking-wide"><i class="fa-solid fa-table text-[#2D6A4F] mr-1"></i> Application Rates & Timing / ការណែនាំការប្រើប្រាស់</h4>
+                <div class="overflow-x-auto rounded-xl border border-gray-200">
+                    <table class="w-full text-left text-xs md:text-sm">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-700 border-b border-gray-200 font-bold">
+                                <th class="p-3">Target Crop (ដំណាំគោលដៅ)</th>
+                                <th class="p-3">Dosage Rate (កម្រិតប្រើប្រាស់)</th>
+                                <th class="p-3">Application Timing (ពេលវេលាប្រើប្រាស់)</th>
+                                <th class="p-3">Primary Method (របៀបប្រើប្រាស់)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="detail-usage-tbody" class="text-gray-600 divide-y divide-gray-100"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    // EXPANDED MASTER REPOSITORY MAP (30 Premium Items — 15 Drone / 15 Rabbit)
+    const SEPARATED_DATABASE = [
+        // ==========================================
+        // DRONE BRAND DIVISION (15 Items Total)
+        // ==========================================
+        { id: "drone-urea", brand: "drone", category: "Urea", titleKh: "ជីអ៊ុយរ៉េ UREA ដ្រូនអាសូតខ្ពស់", titleEn: "Drone Urea Pure Nitrogen", img: "./src/public/UREA02.jpg", desc: "Specialized formulation engineered for drone aerial dispersion. Rapid structural green leaf deployment.", tradeName: "Drone Urea Max-Flow 46-0-0", commonName: "Urea (46%)", typeEn: "Granular Nitrogen", typeKh: "គ្រាប់ស្អាត រលាយលឿនមិនស្ទះក្បាលបាញ់ដ្រូន", weight: "50 KG / Bags", regNum: "កស.គជ/២០២៦-៩៨៧១", usage: [{ crop: "Rice (ស្រូវ)", dose: "10-15 kg/ha", time: "15-20 Days After Sowing", method: "Drone Spraying" }] },
+        { id: "drone-dap", brand: "drone", category: "DAP", titleKh: "ជី DAP ដ្រូនបំប៉នឫស", titleEn: "Drone DAP Root Foundation", img: "./src/public/DAP.jpg", desc: "High phosphorus configuration optimized to prompt rapid early deep-root expansion.", tradeName: "Drone Phosphate 18-46-0", commonName: "DAP Matrix", typeEn: "Diammonium Phosphate Blend", typeKh: "គ្រាប់ម៉ត់ស្មើគ្នា ជំនួយឫសលឿន", weight: "50 KG", regNum: "កស.គជ/២០២៦-០៤៣២", usage: [{ crop: "All Field Crops", dose: "25 kg/ha", time: "Basal Application", method: "Soil Incorporation" }] },
+        { id: "drone-npk-15", brand: "drone", category: "NPK", titleKh: "ជីដ្រូនគ្រាប់ចម្រុះ 15-15-15", titleEn: "Drone Balanced NPK 15-15-15", img: "./src/public/NPK15-15-15.jpg", desc: "Premium balanced nutrient ratios designed to strengthen plant stalks cleanly.", tradeName: "Drone Balanced 15s", commonName: "NPK Compound", typeEn: "Homogeneous Mineral NPK", typeKh: "គ្រាប់គីមីរលាយជ្រាបទឹកជ្រៅ", weight: "50 KG", regNum: "កស.គជ/២០២៦-#####", usage: [{ crop: "Vegetables / Fruits", dose: "30 kg/ha", time: "Mid Lifecycle Phase", method: "Broadcast Dressing" }] },
+        { id: "drone-booster", brand: "drone", category: "NPK", titleKh: "ជីដ្រូនជំនួយទិន្នផលស្រូវ 20-20-15", titleEn: "Drone Rice Booster Max 20-20-15", img: "./src/public/NPK20-20-15.jpg", desc: "Specialized blend optimized for cereal grass structures to extend panicle size.", tradeName: "Drone Rice Booster", commonName: "Panicle Compound Complex", typeEn: "High-Yield Matrix Composite", typeKh: "ជួយឱ្យកួរវែង គ្រាប់ដាក់ម្សៅណែនល្អ", weight: "50 KG", regNum: "កស.គជ/២០២៦-៦៦១៩", usage: [{ crop: "Paddy Rice", dose: "35 kg/ha", time: "Booting Phase Step", method: "Drone Aerial Spraying" }] },
+        { id: "drone-potash", brand: "drone", category: "NPK", titleKh: "ជីដ្រូន 13-13-24 ទម្ងន់គ្រាប់", titleEn: "Drone Weight Master 13-13-24", img: "./src/public/NPK13-13-24.jpg", desc: "Optimizes total starch density weight index vectors within field crops.", tradeName: "Drone Potash Master", commonName: "High-Potassium NPK", typeEn: "Granular Filling Dressing", typeKh: "ជីគុណភាពខ្ពស់ ជម្រុញការដាក់គ្រាប់", weight: "50 KG", regNum: "កស.គជ/២០២៦-៧៧៤២", usage: [{ crop: "Cassava / Rice", dose: "20-25 kg/ha", time: "Grain Filling Step", method: "Broadcasting Placement" }] },
+        { id: "drone-calcium", brand: "drone", category: "NPK", titleKh: "ជីដ្រូនការពារផ្កាជ្រុះ 15-5-25", titleEn: "Drone Blossom Guard 15-5-25", img: "./src/public/NPK15-5-25.jpg", desc: "Highly systemic solution targeted to maximize flower preservation indexes.", tradeName: "Drone Blossom Shield", commonName: "Calcium-Boron Compound", typeEn: "Systemic Tissue Shield", typeKh: "រូបមន្ត ជួយពង្រឹងទងផ្កាឱ្យស្វិតល្អ", weight: "50 KG", regNum: "កស.គជ/២០២៦-៣៣៩១", usage: [{ crop: "Fruit Trees", dose: "15 kg/ha", time: "Flowering Trigger Phase", method: "Ground Incorporation" }] },
+        { id: "drone-magnesium", brand: "drone", category: "NPK", titleKh: "ជីដ្រូនស្លឹកខៀវចែងចាំង 16-16-8", titleEn: "Drone Chlorophyll 16-16-8", img: "./src/public/NPK16-16-8.jpg", desc: "Powers chlorophyll core synthesis, restoring vibrant green leaves.", tradeName: "Drone Chlorophyll Plus", commonName: "Magnesium Active Complex", typeEn: "Secondary Macro Granules", typeKh: "ធ្វើឱ្យស្លឹកខៀវក្រាស់លឿន", weight: "50 KG", regNum: "កស.គជ/២០២៦-២២១០", usage: [{ crop: "Leafy Crop Layouts", dose: "20 kg/ha", time: "Active Tillering Phase", method: "Dressing Dispersion" }] },
+        { id: "drone-zinc", brand: "drone", category: "NPK", titleKh: "ជីដ្រូនស័ង្កសីការពារក្រិន 16-20-0", titleEn: "Drone Zinc Defense 16-20-0", img: "./src/public/NPK16-20-0.jpg", desc: "Prevents crop chlorosis, combating growth stunts under environmental stress.", tradeName: "Drone Zinc Armor", commonName: "Zinc Micronutrient Base", typeEn: "Trace-Element Granule", typeKh: "ការពារជំងឺស្លឹកលឿង ស្លឹកក្រាញ់", weight: "50 KG", regNum: "កស.គជ/២០២៦-៤៤0២", usage: [{ crop: "Cereal Grains", dose: "20 kg/ha", time: "Stress Windows", method: "Soil Placement" }] },
+        { id: "drone-organic-mix", brand: "drone", category: "Organic", titleKh: "ជីធម្មជាតិកែប្រែដីដ្រូន", titleEn: "Drone Soil Bio-Conditioner", img: "./src/public/ORGANIC.jpg", desc: "Engineered to loosen compacted soil structures and stabilize acidic soils.", tradeName: "Drone Bio-Humus", commonName: "Organic Matter Fortifier", typeEn: "Soil Prep Complex", typeKh: "សារធាតុសរីរាង្គកែប្រែដីរឹង និងដីអាស៊ីត", weight: "50 KG", regNum: "កស.គជ/២០២៦-១១០២", usage: [{ crop: "All Terrains", dose: "40 kg/ha", time: "Pre-planting", method: "Soil Dressing" }] },
+        { id: "drone-amino", brand: "drone", category: "Organic", titleKh: "ជីដ្រូនអាមីណូសង្គ្រោះដំណាំ 8-8-8", titleEn: "Drone Amino Recover 8-8-8", img: "./src/public/ORG8-8-8.jpg", desc: "Fast-acting bio-stimulant rich in amino chains to recover crops from heavy drought.", tradeName: "Drone Amino Tissue", commonName: "Amino Chain Bio-Stimulant", typeEn: "Anti-Drought Recovery", typeKh: "សង្គ្រោះដំណាំពីការស្រពោនក្រៀមស្វិត", weight: "50 KG", regNum: "កស.គជ/២០២៦-១០៤៤", usage: [{ crop: "Drought Stressed Fields", dose: "15 kg/ha", time: "Post-Drought Shock", method: "Liquid Dispersion" }] },
+        // New Drone Additions (Items 11-15)
+        { id: "drone-hybrid-twin", brand: "drone", category: "NPK", titleKh: "ជីដ្រូនកូនកាត់ទ្វេដង 18-4-23", titleEn: "Drone Hybrid Twin 18-4-23", img: "./src/public/NPK13-13-24.jpg", desc: "High-efficiency nitrogen-potassium ratio structured cleanly for dual spray applications.", tradeName: "Drone Twin Max", commonName: "High K Complex", typeEn: "Water-Soluble Granule", typeKh: "រូបមន្តបំពេញគ្រាប់ និងមើមលឿនទ្វេដង", weight: "50 KG", regNum: "កស.គជ/២០២៦-១៣៩៩", usage: [{ crop: "Rice / Cassava", dose: "20 kg/ha", time: "Late Maturation Stage", method: "Drone Atomization" }] },
+        { id: "drone-salinity-shield", brand: "drone", category: "NPK", titleKh: "ជីដ្រូនប្រឆាំងដីប្រៃ 15-0-20", titleEn: "Drone Salinity Shield 15-0-20", img: "./src/public/NPK15-5-25.jpg", desc: "Fortified with specific calcium elements to buffer cellular stress inside saline ground zones.", tradeName: "Drone Salinity Shield", commonName: "Anti-Stress Complex", typeEn: "Saline Ground Buffer", typeKh: "ជួយឱ្យដំណាំបឺតជីវជាតិក្នុងដីប្រៃ", weight: "50 KG", regNum: "កស.គជ/២០២៦-៨៨៤២", usage: [{ crop: "Coastal Rice Fields", dose: "25 kg/ha", time: "Early Vegetative Stretch", method: "Soil Dressing" }] },
+        { id: "drone-fulvic-grow", brand: "drone", category: "Organic", titleKh: "ជីដ្រូនអាស៊ីតហ្វុលវិកដាស់ឫស", titleEn: "Drone Fulvic Growth Activator", img: "./src/public/ORGANIC.jpg", desc: "Ultra-concentrated bio-active formula improving total root hair absorption speeds.", tradeName: "Drone Fulvic Gold", commonName: "Humic/Fulvic Extract", typeEn: "Organic Bio-Stimulant", typeKh: "ដាស់ឫសកសិកម្មឱ្យបឺតជីលឿន", weight: "50 KG", regNum: "កស.គជ/២០២៦-៥១១២", usage: [{ crop: "All Seedlings", dose: "15 kg/ha", time: "Nursery / Transplanting", method: "Soil Placement" }] },
+        { id: "drone-super-phos", brand: "drone", category: "DAP", titleKh: "ជីដ្រូនស៊ុបពែរផូស្វាតគ្រាម 0-46-0", titleEn: "Drone Super-Phos Granule 0-46-0", img: "./src/public/DAP.jpg", desc: "Pure high-density phosphorus crystals used to prompt massive blossom fields.", tradeName: "Drone Super-Phos 46", commonName: "Triple Superphosphate", typeEn: "Concentrated Phosphorus Base", typeKh: "ផូស្វាតសុទ្ធកំហាប់ខ្ពស់ជម្រុញផ្កា", weight: "50 KG", regNum: "កស.គជ/២០២៦-៧۷១១", usage: [{ crop: "Fruit Orchards", dose: "30 kg/ha", time: "Pre-flowering Window", method: "Soil Tillage Broadcast" }] },
+        { id: "drone-chitosan-def", brand: "drone", category: "Organic", titleKh: "ជីដ្រូនឈីតូសានការពារសត្វល្អិត", titleEn: "Drone Chitosan Bio-Defense", img: "./src/public/ORG8-8-8.jpg", desc: "Marine organic chitin derivatives naturally increasing systemic crop cell thickness.", tradeName: "Drone Chitosan Armor", commonName: "Natural Chitin Polymer", typeEn: "Organic Cell Wall Fortifier", typeKh: "បង្កើនភាពធន់នឹងសត្វល្អិតយាយី", weight: "50 KG", regNum: "កស.គជ/២០២៦-២២៩១", usage: [{ crop: "Vegetable Crops", dose: "15 kg/ha", time: "Active Pest Windows", method: "Liquid Dispersion Spray" }] },
+
+        // ==========================================
+        // RABBIT BRAND DIVISION (15 Items Total)
+        // ==========================================
+        { id: "rabbit-urea", brand: "rabbit", category: "Urea", titleKh: "ជីអ៊ុយរ៉េម៉ាកទន្សាយ អាសូតសុទ្ធ ៤៦%", titleEn: "Rabbit Premium Urea 46-0-0", img: "./src/public/UREA02.jpg", desc: "Traditional dense crystal configuration built for long-lasting soil nitrogen preservation.", tradeName: "Rabbit Brand Golden Urea", commonName: "Urea Granular", typeEn: "Agricultural Urea Granule", typeKh: "គ្រាប់គុជធំៗ ហួតយឺត ផលស៊ីជម្រៅ", weight: "50 KG Bag", regNum: "កស.គជ/២០២៦-១១០២", usage: [{ crop: "Paddy Rice", dose: "40-50 kg/ha", time: "Tillering Phase", method: "Manual Soil Broadcast" }] },
+        { id: "rabbit-dap", brand: "rabbit", category: "DAP", titleKh: "ជីដេអាប៉េម៉ាកទន្សាយ ប្ញសរឹងមាំ", titleEn: "Rabbit Classic DAP 18-46-0", img: "./src/public/DAP.jpg", desc: "Superb foundational soil compound providing robust early energetic support directly to roots.", tradeName: "Rabbit Classic DAP", commonName: "Foundational DAP", typeEn: "Foundational Phosphate", typeKh: "គ្រាប់ធំរឹងមាំ ជួយឫសបឺតជីបានចម្រុះ", weight: "50 KG Bag", regNum: "កស.គជ/២០២៦-០1៤៩", usage: [{ crop: "Fruit Trees", dose: "30 kg/ha", time: "Basal Foundation Setup", method: "Manual Tillage Incorporation" }] },
+        { id: "rabbit-npk-balanced", brand: "rabbit", category: "NPK", titleKh: "ជីទន្សាយបំប៉នទូទៅ 15-15-15", titleEn: "Rabbit Classic Balanced 15-15-15", img: "./src/public/NPK15-15-15.jpg", desc: "Provides perfectly uniform chemical balance distributions across mixed plantation terrains.", tradeName: "Rabbit Balance 15s", commonName: "Homogeneous NPK Compound", typeEn: "Balanced Mineral NPK Matrix", typeKh: "ជីគីមីសមាសធាតុស្មើគ្នាគ្រប់គ្រាប់", weight: "50 KG Bag", regNum: "កស.គជ/២០២៦-៩៩៥២", usage: [{ crop: "All Crops", dose: "25-30 kg/ha", time: "Vegetative Lifecycle Intersect", method: "Soil Broadcast" }] },
+        { id: "rabbit-cassava", brand: "rabbit", category: "Organic", titleKh: "ជីទន្សាយពង្រីកមើមដំឡូងមី 10-10-10", titleEn: "Rabbit Cassava Expander 10-10-10", img: "./src/public/ORG10-10-10.jpg", desc: "Accelerates early root-to-tuber transitioning metrics, amplifying starch densities inside cassava.", tradeName: "Rabbit Cassava Max", commonName: "Starch Density Complex", typeEn: "Root Tuber Stimulant", typeKh: "ពង្រីកទំហំមើមដំឡូងមីឱ្យធាត់ធំ", weight: "50 KG", regNum: "កស.គជ/២០២៦-៨៨១៧", usage: [{ crop: "Cassava Layouts", dose: "40 kg/ha", time: "Month 3 Root Expansion", method: "Soil Dressing" }] },
+        { id: "rabbit-corn", brand: "rabbit", category: "Organic", titleKh: "ជីទន្សាយជំនួយដើមពោត 12-0-1", titleEn: "Rabbit Corn Maximizer 12-0-1", img: "./src/public/ORG12-0-1.jpg", desc: "Custom micro-element balance designed for field corn to enrich stalk strength.", tradeName: "Rabbit Corn Kernel Master", commonName: "Field Corn Nutrition", typeEn: "Stalk Reinforcement Granules", typeKh: "ជម្រុញឱ្យផ្លែធំ គ្រាប់ជិតស្មើគ្នាដល់ចុង", weight: "50 KG", regNum: "កស.គជ/២០២៦-៩៩២១", usage: [{ crop: "Field Corn Layouts", dose: "25 kg/ha", time: "V6 Vegetative Cycle", method: "Side-Dressing Setup" }] },
+        { id: "rabbit-structural-org", brand: "rabbit", category: "Organic", titleKh: "ជីសរីរាង្គធម្មជាតិម៉ាកទន្សាយ", titleEn: "Rabbit Soil Armor Organic", img: "./src/public/ORGANIC.jpg", desc: "Builds robust structural barriers within crop cell walls to maximize resistance.", tradeName: "Rabbit Silicon Cell-Armor", commonName: "Crystalline Bio-Fortifier", typeEn: "Cellular Structuring Element", typeKh: "ធន់នឹងការវាយប្រហារពីជំងឺផ្សិត", weight: "50 KG", regNum: "កស.គជ/២០២៦-０1៤៨", usage: [{ crop: "All Field Crops", dose: "30 kg/ha", time: "High Moisture Risk Eras", method: "Soil Basal Mix" }] },
+        { id: "rabbit-heavy-grain", brand: "rabbit", category: "NPK", titleKh: "ជីទន្សាយដាក់ម្សៅគ្រាប់ 13-13-24", titleEn: "Rabbit Kernel-Weight 13-13-24", img: "./src/public/NPK13-13-24.jpg", desc: "Premium potassium compound curated to optimize grain filling weight indices.", tradeName: "Rabbit Potash Master", commonName: "High-Potassium NPK", typeEn: "Granular Filling Dressing", typeKh: "ជីគុណភាពខ្ពស់ ជម្រុញការដាក់គ្រាប់", weight: "50 KG", regNum: "កស.គជ/២០២៦-៧៧៤២", usage: [{ crop: "Rice / Fruits", dose: "35 kg/ha", time: "Grain Filling Step", method: "Broadcasting Placement" }] },
+        { id: "rabbit-npk-green", brand: "rabbit", category: "NPK", titleKh: "ជីទន្សាយពន្លកបៃតង 16-16-8", titleEn: "Rabbit Green-Sprout 16-16-8", img: "./src/public/NPK16-16-8.jpg", desc: "Optimizes broad-spectrum leafy expansions and accelerates growth timelines.", tradeName: "Rabbit Chlorophyll Plus", commonName: "Magnesium Active Complex", typeEn: "Secondary Macro Granules", typeKh: "ធ្វើឱ្យស្លឹកខៀវក្រាស់លឿន", weight: "50 KG", regNum: "កស.គជ/២០២៦-២២10", usage: [{ crop: "Leafy Crop Layouts", dose: "20 kg/ha", time: "Active Tillering Phase", method: "Dressing Dispersion" }] },
+        { id: "rabbit-phospho-max", brand: "rabbit", category: "NPK", titleKh: "ជីទន្សាយបំប៉នបែកមែក 16-20-0", titleEn: "Rabbit Nitro-Phos 16-20-0", img: "./src/public/NPK16-20-0.jpg", desc: "Excellent formulation to maximize side-branching counts and tiller structures.", tradeName: "Rabbit Zinc Armor", commonName: "Zinc Micronutrient Base", typeEn: "Trace-Element Granule", typeKh: "ការពារជំងឺស្លឹកលឿង ស្លឹកក្រាញ់", weight: "50 KG", regNum: "កស.គជ/២០២៦-៤៤0២", usage: [{ crop: "Cereal Grains", dose: "20 kg/ha", time: "Stress Windows", method: "Soil Placement" }] },
+        { id: "rabbit-crop-booster", brand: "rabbit", category: "NPK", titleKh: "ជីទន្សាយមហារំដួល ២០-២០-១៥", titleEn: "Rabbit Rice Master 20-20-15", img: "./src/public/NPK20-20-15.jpg", desc: "Engineered specifically to maximize grain head weights while keeping empty husks low.", tradeName: "Rabbit Rice Booster", commonName: "Panicle Compound Complex", typeEn: "High-Yield Matrix Composite", typeKh: "ជួយឱ្យកួរវែង គ្រាប់ដាក់ម្សៅណែនល្អ", weight: "50 KG Bag", regNum: "កស.គជ/២០២៦-៦៦១៩", usage: [{ crop: "Paddy Rice Field Layouts", dose: "35 kg/ha", time: "Booting Phase Step", method: "Manual Broadcasting" }] },
+        // New Rabbit Additions (Items 26-30)
+        { id: "rabbit-triple-force", brand: "rabbit", category: "NPK", titleKh: "ជីទន្សាយកម្លាំងបីជាន់ 16-16-16", titleEn: "Rabbit Triple-Force 16-16-16", img: "./src/public/NPK15-15-15.jpg", desc: "Premium grade symmetrical complex providing synchronized nutrient feeds to heavy feeding crops.", tradeName: "Rabbit Triple Sixteen", commonName: "Symmetrical NPK Base", typeEn: "Premium Balanced Mineral", typeKh: "រូបមន្តស្មើគ្នា បំប៉នគ្រប់ដំណាក់កាល", weight: "50 KG", regNum: "កស.គជ/២០២៦-៧៧១២", usage: [{ crop: "Industrial Plantations", dose: "30 kg/ha", time: "Peak Growing Cycles", method: "Soil Broadcast Drop" }] },
+        { id: "rabbit-carbon-dap", brand: "rabbit", category: "DAP", titleKh: "ជីដេអាប៉េខ្មៅទន្សាយបំប៉នដី", titleEn: "Rabbit Black DAP Carbon-Base", img: "./src/public/DAP.jpg", desc: "Infused with humic matrix blocks to deliver sustained phosphorus conversion over time.", tradeName: "Rabbit Humic DAP", commonName: "Enriched Diammonium Phosphate", typeEn: "Carbon-Complex Phosphate", typeKh: "គ្រាប់ខ្មៅរក្សាជាតិផូស្វ័រក្នុងដីបានយូរ", weight: "50 KG", regNum: "កស.គជ/២០២៦-០៥៥១", usage: [{ crop: "Legumes / Beans", dose: "25 kg/ha", time: "Pre-Sowing Treatment", method: "Soil Incorporation" }] },
+        { id: "rabbit-leafy-max", brand: "rabbit", category: "NPK", titleKh: "ជីទន្សាយជម្រុញស្លឹកបន្លែ 25-5-5", titleEn: "Rabbit Leafy-Veg Max 25-5-5", img: "./src/public/UREA02.jpg", desc: "High-nitrogen surge formula optimized specifically for commercial leafy greens.", tradeName: "Rabbit Leafy King", commonName: "High-Nitrogen Compound", typeEn: "Vegetable Growth Booster", typeKh: "ជម្រុញការលូតលាស់ធំធាត់លឿនទ្វេដង", weight: "50 KG", regNum: "កស.គជ/២០២៦-៩៩០១", usage: [{ crop: "Leafy Vegetables", dose: "15 kg/ha", time: "Early Leaf Flushing", method: "Manual Row Placement" }] },
+        { id: "rabbit-seaweed-ext", brand: "rabbit", category: "Organic", titleKh: "ជីសរីរាង្គសារាយសមុទ្រទន្សាយ", titleEn: "Rabbit Marine Seaweed Extract", img: "./src/public/ORGANIC.jpg", desc: "Cold-extracted marine concentrates rich in natural hormones to survive thermal heat waves.", tradeName: "Rabbit Sea-Bio", commonName: "Algae Bio-Complex", typeEn: "Organic Thermal Shield", typeKh: "ជួយឱ្យដំណាំធន់នឹងអាកាសធាតុក្តៅខ្លាំង", weight: "50 KG", regNum: "កស.គជ/២០២៦-៤៤១១", usage: [{ crop: "All Field Crops", dose: "20 kg/ha", time: "Summer Heat Stress Windows", method: "Soil Hydration Broadcast" }] },
+        { id: "rabbit-sulfate-potash", brand: "rabbit", category: "NPK", titleKh: "ជីទន្សាយប៉ូតាស្យូមស៊ុលហ្វាត 0-0-50", titleEn: "Rabbit Premium Sulfate of Potash", img: "./src/public/NPK13-13-24.jpg", desc: "Chloride-free premium source of potassium and sulfur to maximize sugar synthesis.", tradeName: "Rabbit White Potash 50", commonName: "Sulfate of Potash (SOP)", typeEn: "Chloride-Free Potassium", typeKh: "បង្កើនជាតិស្ករ ម្សៅ និងរសជាតិផ្លែឈើ", weight: "50 KG", regNum: "កស.គជ/២០២៦-៣៣១២", usage: [{ crop: "High-Value Fruit / Tubers", dose: "25 kg/ha", time: "Fruit Sizing Stages", method: "Band Application" }] }
+    ];
+
+    // =========================================================
+    // STATE REGISTRY TRACKING CONTROLS
+    // =========================================================
+    let currentSelectedBrand = '';
+    let currentSelectedCategory = 'all';
+    let currentSpaPage = 1;         // Tracks pagination progress position
+    const ITEMS_PER_PAGE = 8;       // Limits viewport to 8 items per page
+
+    // =========================================================
+    // NATIVE SITE ELEMENT LAYOUT POSITION CONTROLLER
+    // =========================================================
+    function setMainSiteElementsVisibility(hide) {
+        const nodes = document.querySelectorAll('header, footer, #home, #plant-care, #company, #contact, section:not(#products)');
+        nodes.forEach(el => {
+            if (hide) {
+                el.classList.add('hidden');
+            } else {
+                el.classList.remove('hidden');
+            }
+        });
+    }
+
+    function displayViewPanel(viewElementId) {
+        document.querySelectorAll('.workspace-view').forEach(v => v.classList.add('hidden'));
+        document.getElementById(viewElementId).classList.remove('hidden');
+
+        if (viewElementId === 'view-list' || viewElementId === 'view-detail') {
+            setMainSiteElementsVisibility(true);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            setMainSiteElementsVisibility(false);
+        }
+    }
+
+    // =========================================================
+    // NAVIGATION ROUTING MACHINE ENGINE 
+    // =========================================================
+    function navigateToRoute(routeTarget) {
+        window.location.hash = routeTarget;
+    }
+
+    function navigateBackToList() {
+        if (currentSelectedBrand) {
+            window.location.hash = `catalog-${currentSelectedBrand}`;
+        } else {
+            window.location.hash = 'brands';
+        }
+    }
+
+    function parseApplicationHashState() {
+        const rawHash = window.location.hash.trim().replace('#', '');
+        
+        if (rawHash.startsWith('catalog-')) {
+            currentSelectedBrand = rawHash.replace('catalog-', '');
+            setupCatalogGridDisplay(brandFromRouteFix(currentSelectedBrand));
+            displayViewPanel('view-list');
+        } 
+        else if (rawHash.startsWith('detail-')) {
+            const productTargetId = rawHash.replace('detail-', '');
+            setupProductDetailDisplay(productTargetId);
+            displayViewPanel('view-detail');
+        } 
+        else {
+            displayViewPanel('view-brands');
+        }
+    }
+
+    // Secondary fallback guard for route safety anomalies
+    function brandFromRouteFix(str) {
+        return str.toLowerCase().includes('rabbit') ? 'rabbit' : 'drone';
+    }
+
+    // =========================================================
+    // LAYOUT DATA INJECTION DOM CONTROLLERS
+    // =========================================================
+    function setupCatalogGridDisplay(brandKey) {
+        currentSelectedBrand = brandKey;
+        currentSelectedCategory = 'all';
+        currentSpaPage = 1; // Resets pagination to page 1 on brand switches
+        
+        document.querySelectorAll('.spa-filter-btn').forEach(b => {
+            b.classList.remove('bg-[#2D6A4F]', 'text-white');
+            b.classList.add('bg-gray-100', 'text-gray-600');
+        });
+        document.getElementById('btn-spa-all').classList.add('bg-[#2D6A4F]', 'text-white');
+        
+        const titleContainer = document.getElementById('catalog-brand-title');
+        titleContainer.innerHTML = `<span class="text-[#2D6A4F]">${brandKey === 'rabbit' ? 'Rabbit' : 'Drone'} Fertilizer</span> Catalog`;
+        
+        document.getElementById('spa-search').value = ''; 
+        renderBrandGrid();
+    }
+
+    function setSpaCategory(categoryKey) {
+        currentSelectedCategory = categoryKey;
+        currentSpaPage = 1; // Resets pagination to page 1 on category filtering adjustments
+        
+        document.querySelectorAll('.spa-filter-btn').forEach(b => {
+            b.classList.remove('bg-[#2D6A4F]', 'text-white');
+            b.classList.add('bg-gray-100', 'text-gray-600');
+        });
+        document.getElementById(`btn-spa-${categoryKey}`).classList.add('bg-[#2D6A4F]', 'text-white');
+        renderBrandGrid();
+    }
+
+    function handleSearchTypingInput() {
+        currentSpaPage = 1; // Resets pagination to page 1 while typing searches
+        renderBrandGrid();
+    }
+
+    // =========================================================
+    // CORE GRID GRAPH MATRIX AND PAGINATION GENERATOR
+    // =========================================================
+    function renderBrandGrid() {
+        const outputGrid = document.getElementById('spa-grid-container');
+        const paginationBar = document.getElementById('spa-pagination-container');
+        const searchInputString = document.getElementById('spa-search').value.toLowerCase().trim();
+
+        // Step 1: Compute entire matching dataset pool matches
+        const targetedItems = SEPARATED_DATABASE.filter(p => {
+            if (p.brand !== currentSelectedBrand) return false;
+            if (currentSelectedCategory !== 'all' && p.category !== currentSelectedCategory) return false;
+            if (searchInputString && !p.titleEn.toLowerCase().includes(searchInputString) && !p.titleKh.toLowerCase().includes(searchInputString)) return false;
+            return true;
+        });
+
+        // Step 2: Handle empty result states
+        if (!targetedItems.length) {
+            outputGrid.innerHTML = `<div class="col-span-full text-center py-16 text-gray-400 text-xs font-medium">No catalog entries match your filters.</div>`;
+            paginationBar.innerHTML = '';
+            return;
+        }
+
+        // Step 3: Run total math variables for pages
+        const totalPages = Math.ceil(targetedItems.length / ITEMS_PER_PAGE);
+        if (currentSpaPage > totalPages) { currentSpaPage = totalPages; }
+        if (currentSpaPage < 1) { currentSpaPage = 1; }
+
+        // Step 4: Extract the exact 8-item window slice profile
+        const startIndex = (currentSpaPage - 1) * ITEMS_PER_PAGE;
+        const endIndex = startIndex + ITEMS_PER_PAGE;
+        const pageSliceItems = targetedItems.slice(startIndex, endIndex);
+
+        // Step 5: Render active visible grid elements to DOM
+        outputGrid.innerHTML = pageSliceItems.map(p => `
+            <div onclick="navigateToRoute('detail-${p.id}')" class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 p-4 text-center cursor-pointer group hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-full h-44 rounded-xl overflow-hidden bg-gray-50 mb-3 shadow-inner relative">
+                        <img src="${p.img}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#2D6A4F] bg-emerald-50 px-2 py-0.5 rounded-full inline-block mb-2">${p.category}</span>
+                    <h4 class="font-bold text-sm text-gray-800 line-clamp-1 mb-0.5">${p.titleKh}</h4>
+                    <h5 class="text-[11px] font-semibold text-gray-400 line-clamp-1 mb-2">${p.titleEn}</h5>
+                </div>
+                <div class="mt-2 pt-3 border-t border-gray-50 text-[11px] font-bold text-[#2D6A4F] uppercase tracking-wider">
+                    View Specs <i class="fa-solid fa-chevron-right ml-0.5 text-[9px]"></i>
+                </div>
+            </div>
+        `).join('');
+
+        // Step 6: Assemble the pagination bar controls dynamically
+        renderPaginationControls(totalPages);
+    }
+
+    function renderPaginationControls(totalPages) {
+        const paginationBar = document.getElementById('spa-pagination-container');
+        
+        // Hide pagination if contents fit within a single page view limit
+        if (totalPages <= 1) {
+            paginationBar.innerHTML = '';
+            return;
+        }
+
+        let controlsHtml = '';
+
+        // Back / Previous Button Component 
+        if (currentSpaPage > 1) {
+            controlsHtml += `<button onclick="changeSpaPage(${currentSpaPage - 1})" class="bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 font-bold w-9 h-9 rounded-xl text-xs flex items-center justify-center transition-all shadow-sm"><i class="fa-solid fa-chevron-left"></i></button>`;
+        } else {
+            controlsHtml += `<button disabled class="bg-gray-50 text-gray-300 border border-gray-100 cursor-not-allowed w-9 h-9 rounded-xl text-xs flex items-center justify-center"><i class="fa-solid fa-chevron-left"></i></button>`;
+        }
+
+        // Numerical Index Button Sets Loops
+        for (let i = 1; i <= totalPages; i++) {
+            if (i === currentSpaPage) {
+                // Active Page Style UI Matrix Selection
+                controlsHtml += `<button class="bg-[#2D6A4F] text-white shadow-sm font-black w-9 h-9 rounded-xl text-xs flex items-center justify-center">${i}</button>`;
+            } else {
+                // Idle Page Style UI Selection
+                controlsHtml += `<button onclick="changeSpaPage(${i})" class="bg-white text-gray-600 hover:bg-[#2D6A4F] hover:text-white border border-gray-200 font-bold w-9 h-9 rounded-xl text-xs flex items-center justify-center transition-all shadow-sm">${i}</button>`;
+            }
+        }
+
+        // Forward / Next Button Component
+        if (currentSpaPage < totalPages) {
+            controlsHtml += `<button onclick="changeSpaPage(${currentSpaPage + 1})" class="bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 font-bold w-9 h-9 rounded-xl text-xs flex items-center justify-center transition-all shadow-sm"><i class="fa-solid fa-chevron-right"></i></button>`;
+        } else {
+            controlsHtml += `<button disabled class="bg-gray-50 text-gray-300 border border-gray-100 cursor-not-allowed w-9 h-9 rounded-xl text-xs flex items-center justify-center"><i class="fa-solid fa-chevron-right"></i></button>`;
+        }
+
+        paginationBar.innerHTML = controlsHtml;
+    }
+
+    function changeSpaPage(targetPageNumber) {
+        currentSpaPage = targetPageNumber;
+        renderBrandGrid();
+        
+        // Smooth scroll position directly back to the top of the workspace grid panel
+        const targetElement = document.getElementById('products');
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // =========================================================
+    // ITEM DATA SHEET INJECTION MODULE RENDERER
+    // =========================================================
+    function setupProductDetailDisplay(productId) {
+        const item = SEPARATED_DATABASE.find(p => p.id === productId);
+        if (!item) return;
+
+        currentSelectedBrand = item.brand;
+
+        document.getElementById('detail-brand-badge').innerText = `${item.brand.toUpperCase()} BRAND DATASHEET`;
+        document.getElementById('detail-category-badge').innerText = `${item.category} SOLUTION`;
+        document.getElementById('detail-title-kh').innerText = item.titleKh;
+        document.getElementById('detail-title-en').innerText = item.titleEn;
+        document.getElementById('s-type-en').innerText = item.typeEn;
+        document.getElementById('s-trade').innerText = item.tradeName;
+        document.getElementById('s-common').innerText = item.commonName;
+        document.getElementById('s-type-kh').innerText = item.typeKh;
+        document.getElementById('s-weight').innerText = item.weight;
+        document.getElementById('s-reg').innerText = item.regNum;
+        document.getElementById('detail-desc').innerText = item.desc;
+
+        document.getElementById('detail-main-img').src = item.img;
+
+        const contextualImages = [item.img, "./src/public/UREA02.jpg", "./src/public/DAP.jpg", "./src/public/NPK.jpg", "./src/public/ORGANIC.jpg", "./src/public/NPK13-13-24.jpg"];
+        document.getElementById('detail-gallery-row').innerHTML = contextualImages.map((url, idx) => `
+            <div onclick="document.getElementById('detail-main-img').src='${url}'; swapThumbnailBorders(this)" class="aspect-square rounded-lg overflow-hidden border-2 ${idx === 0 ? 'border-[#2D6A4F]' : 'border-transparent'} bg-gray-50 cursor-pointer transition-all">
+                <img src="${url}" class="w-full h-full object-cover">
+            </div>
+        `).join('');
+
+        document.getElementById('detail-usage-tbody').innerHTML = item.usage.map(r => `
+            <tr class="hover:bg-gray-50/50 transition-colors">
+                <td class="p-3 font-bold text-gray-900">${r.crop}</td>
+                <td class="p-3 text-[#2D6A4F] font-semibold">${r.dose}</td>
+                <td class="p-3 font-medium text-gray-700">${r.time}</td>
+                <td class="p-3 text-gray-500 text-xs">${r.method}</td>
+            </tr>
+        `).join('');
+    }
+
+    function swapThumbnailBorders(selectedDiv) {
+        selectedDiv.parentElement.querySelectorAll('div').forEach(d => d.classList.replace('border-[#2D6A4F]', 'border-transparent'));
+        selectedDiv.classList.replace('border-transparent', 'border-[#2D6A4F]');
+    }
+
+    // =========================================================
+    // PLATFORM-WIDE ROUTING LIFE-CYCLE EVENT LISTENERS
+    // =========================================================
+    window.addEventListener('hashchange', parseApplicationHashState);
+    
+    document.addEventListener("DOMContentLoaded", parseApplicationHashState);
+    if (document.readyState === "interactive" || document.readyState === "complete") { 
+        parseApplicationHashState(); 
+    }
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // ---- PART A: SLIDER CAROUSEL ENGINE OPERATIONS ----
+    const track = document.getElementById('slider-track');
+    const prevBtn = document.getElementById('slide-prev');
+    const nextBtn = document.getElementById('slide-next');
+    const items = track.children;
+    const totalItems = items.length;
+    
+    let currentIndex = 0;
+    let autoPlayInterval = null;
+    const slideDelay = 3500; 
+
+    function getVisibleCardsCount() {
+        if (window.innerWidth >= 1024) return 4; 
+        if (window.innerWidth >= 640) return 2;  
+        return 1;                                
+    }
+
+    function updateSliderPosition() {
+        const visibleCards = getVisibleCardsCount();
+        const maxIndex = totalItems - visibleCards;
+
+        if (currentIndex > maxIndex) {
+            currentIndex = 0; 
+        } else if (currentIndex < 0) {
+            currentIndex = maxIndex; 
+        }
+
+        const itemWidth = items[0].getBoundingClientRect().width;
+        const gap = 24; 
+        
+        const translateXAmount = currentIndex * (itemWidth + gap);
+        track.style.transform = `translateX(-${translateXAmount}px)`;
+    }
+
+    function nextSlide() {
+        currentIndex++;
+        updateSliderPosition();
+    }
+
+    function prevSlide() {
+        currentIndex--;
+        updateSliderPosition();
+    }
+
+    function startAutoplay() {
+        stopAutoplay();
+        autoPlayInterval = setInterval(nextSlide, slideDelay);
+    }
+
+    function stopAutoplay() {
+        if (autoPlayInterval) clearInterval(autoPlayInterval);
+    }
+
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoplay(); 
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoplay(); 
+    });
+
+    const sliderContainer = track.parentElement;
+    sliderContainer.addEventListener('mouseenter', stopAutoplay);
+    sliderContainer.addEventListener('mouseleave', startAutoplay);
+
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateSliderPosition();
+        }, 100);
+    });
+
+    startAutoplay();
+
+
+    // ---- PART B: INTERACTIVE DATA MODAL HOOK OPERATIONS ----
+    const modal = document.getElementById("product-detail-modal");
+    const closeModalBtn = document.getElementById("close-modal-btn");
+    
+    // Select detail modal nodes
+    const mImg = document.getElementById("modal-img");
+    const mWeight = document.getElementById("modal-weight-badge");
+    const mTitleEn = document.getElementById("modal-title-en");
+    const mTitleKh = document.getElementById("modal-title-kh");
+    const mKindEn = document.getElementById("modal-kind-en");
+    const mKindKh = document.getElementById("modal-kind-kh");
+    const mUseEn = document.getElementById("modal-use-en");
+    const mUseKh = document.getElementById("modal-use-kh");
+    const mDescEn = document.getElementById("modal-desc-en");
+    const mDescKh = document.getElementById("modal-desc-kh");
+    const mTelLink = document.getElementById("modal-tel-link");
+    const mTgLink = document.getElementById("modal-tg-link");
+    const mRelatedContainer = document.getElementById("modal-related-container");
+
+    const productButtons = document.querySelectorAll(".open-detail-btn");
+
+    function openModalWithElement(btn) {
+        // Collect technical attributes safely from DOM
+        const img = btn.getAttribute("data-img") || "./src/public/UREA02.jpg"; 
+        const weight = btn.getAttribute("data-weight") || "50KG/BAG";
+        const titleEn = btn.getAttribute("data-title-en") || "";
+        const titleKh = btn.getAttribute("data-title-kh") || "";
+        const kindEn = btn.getAttribute("data-kind-en") || "";
+        const kindKh = btn.getAttribute("data-kind-kh") || "";
+        const useEn = btn.getAttribute("data-use-en") || "";
+        const useKh = btn.getAttribute("data-use-kh") || "";
+        const descEn = btn.getAttribute("data-desc-en") || "";
+        const descKh = btn.getAttribute("data-desc-kh") || "";
+        const tel = btn.getAttribute("data-tel") || "#";
+        const tg = btn.getAttribute("data-tg") || "#";
+        const currentId = btn.getAttribute("data-id");
+
+        // Write content into modal window layout
+        mImg.src = img;
+        mWeight.innerText = weight;
+        mTitleEn.innerText = titleEn;
+        mTitleKh.innerText = titleKh;
+        mKindEn.innerText = kindEn;
+        mKindKh.innerText = kindKh;
+        mUseEn.innerText = useEn;
+        mUseKh.innerText = useKh;
+        mDescEn.innerText = descEn;
+        mDescKh.innerText = descKh;
+        
+        mTelLink.href = tel;
+        mTgLink.href = tg;
+
+        // Rebuild clean alternative recommendations strip assembly
+        mRelatedContainer.innerHTML = "";
+        productButtons.forEach(otherBtn => {
+            if(otherBtn.getAttribute("data-id") !== currentId) {
+                const rImg = otherBtn.getAttribute("data-img") || "./src/public/DAP.jpg";
+                const rTitleEn = otherBtn.getAttribute("data-title-en") || "";
+                const rTitleKh = otherBtn.getAttribute("data-title-kh") || "";
+
+                const relDiv = document.createElement("div");
+                relDiv.className = "flex items-center gap-2 bg-white/10 hover:bg-white/20 p-2 rounded-xl cursor-pointer transition-all border border-white/5 flex-shrink-0 min-w-[170px] max-w-[200px]";
+                relDiv.innerHTML = `
+                    <div class="w-8 h-8 bg-white/20 rounded-md p-0.5 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                        <img src="${rImg}" class="object-contain h-full w-full">
+                    </div>
+                    <div class="truncate text-[10px] leading-tight flex-1">
+                        <p class="font-bold text-white truncate lang-en">${rTitleEn}</p>
+                        <p class="text-[#E4B044] font-medium truncate lang-kh">${rTitleKh}</p>
+                    </div>
+                `;
+                relDiv.addEventListener("click", () => {
+                    openModalWithElement(otherBtn);
+                });
+                mRelatedContainer.appendChild(relDiv);
+            }
+        });
+
+        // Toggle visibility with smooth presentation layer
+        modal.classList.remove("opacity-0", "pointer-events-none");
+        document.body.style.overflow = "hidden"; // Freeze document frame scroll path
+        stopAutoplay(); // Freeze background slideshow calculations
+    }
+
+    productButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            openModalWithElement(this);
+        });
+    });
+
+    function closeModal() {
+        modal.classList.add("opacity-0", "pointer-events-none");
+        document.body.style.overflow = ""; 
+        startAutoplay(); 
+    }
+
+    closeModalBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+});
+</script>
+
+    <section id="care" class="py-20 px-6 max-w-4xl mx-auto reveal">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-[18px] font-bold text-[#2D6A4F] uppercase tracking-widest block mb-2 lang-en">Interactive Management</span>
+            <span class="text-[18px] font-bold text-[#2D6A4F] uppercase tracking-widest block mb-2 lang-kh">បច្ចេកទេសកសិកម្ម</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 hero-font lang-en">Crop Care & Diagnostics</h3>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 hero-font lang-kh">បច្ចេកទេសថែទាំដំណាំ</h3>
+            <p class="text-xs text-gray-500 mt-2 font-medium lang-en">Click on any section below to expand critical field insights</p>
+            <p class="text-xs text-gray-500 mt-2 font-medium lang-kh">ចុចលើផ្នែកខាងក្រោមដើម្បីមើលព័ត៌មានលម្អិតតាមប្រភេទដំណាំ</p>
+        </div>
+
+        <div class="space-y-4">
+            <details class="group bg-white border border-gray-200/70 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 open:shadow-md">
+                <summary class="flex justify-between items-center p-5 md:p-6 text-sm md:text-base font-bold text-[#1B4332] cursor-pointer select-none bg-emerald-50/20 hover:bg-emerald-50/50 transition-colors">
+                    <span class="flex items-center space-x-3">
+                        <i class="fa-solid fa-wheat-awn text-[#2D6A4F]"></i>
+                        <span class="lang-en">Rice Crop Yield Maximization</span>
+                        <span class="lang-kh">ការបង្កើនទិន្នផលដំណាំស្រូវ</span>
+                    </span>
+                    <span class="text-xs text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <div class="p-5 md:p-6 pt-3 border-t border-gray-100 text-xs md:text-sm text-gray-600 leading-relaxed bg-white">
+                    <p class="lang-en">To ensure premium grain density and structural thickness, deploy core NPK compounds during vegetative transformations. Keep detailed moisture profiles during early root setup to avoid fungal disease triggers.</p>
+                    <p class="lang-kh text-gray-700 font-medium">ដើម្បីធានាបាននូវភាគរយសំណើមល្អ និងគ្រាប់ស្រូវដាក់គីឡូ សូមប្រើប្រាស់រូបមន្តជី NPK របស់យើងនៅក្នុងវគ្គលូតលាស់។ រក្សាតុល្យភាពដីឱ្យបានត្រឹមត្រូវក្នុងអំឡុងពេលបង្កើតឫសដំបូង ដើម្បីការពារ និងទប់ស្កាត់ការរីករាលដាលនៃជំងឺផ្សិតផ្សេងៗ។</p>
+                </div>
+            </details>
+
+            <details class="group bg-white border border-gray-200/70 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 open:shadow-md">
+                <summary class="flex justify-between items-center p-5 md:p-6 text-sm md:text-base font-bold text-[#1B4332] cursor-pointer select-none bg-emerald-50/20 hover:bg-emerald-50/50 transition-colors">
+                    <span class="flex items-center space-x-3">
+                        <i class="fa-solid fa-cloud-sun-rain text-[#2D6A4F]"></i>
+                        <span class="lang-en">Corn Field Development Profiles</span>
+                        <span class="lang-kh">ការថែទាំចម្ការពោត</span>
+                    </span>
+                    <span class="text-xs text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <div class="p-5 md:p-6 pt-3 border-t border-gray-100 text-xs md:text-sm text-gray-600 leading-relaxed bg-white">
+                    <p class="lang-en">High nutrient schedules in early vegetative cycles are fully backed by high-purity DAP. Proper placement yields clean grain setup along the cob while hardening the plant against climate stress factors.</p>
+                    <p class="lang-kh text-gray-700 font-medium">តម្រូវការសារធាតុអាសូតខ្ពស់ក្នុងអំឡុងពេលដំណាក់កាលលូតលាស់ដំបូង ត្រូវបានគាំទ្រយ៉ាងពេញទំហឹងដោយផលិតផលជី DAP ដែលមានគុណភាពខ្ពស់របស់យើង។ ការប្រើប្រាស់បានត្រឹមត្រូវធានានូវការលូតលាស់គ្រាប់បានល្អ និងពង្រឹងភាពស៊ាំប្រឆាំងនឹងអាកាសធាតុប្រែប្រួល biographies。</p>
+                </div>
+            </details>
+
+            <details class="group bg-white border border-gray-200/70 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 open:shadow-md">
+                <summary class="flex justify-between items-center p-5 md:p-6 text-sm md:text-base font-bold text-[#1B4332] cursor-pointer select-none bg-emerald-50/20 hover:bg-emerald-50/50 transition-colors">
+                    <span class="flex items-center space-x-3">
+                        <i class="fa-solid fa-mountain text-[#2D6A4F]"></i>
+                        <span class="lang-en">Cassava Subterranean Expansion</span>
+                        <span class="lang-kh">ការជំរុញមើមដំឡូងមី</span>
+                    </span>
+                    <span class="text-xs text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <div class="p-5 md:p-6 pt-3 border-t border-gray-100 text-xs md:text-sm text-gray-600 leading-relaxed bg-white">
+                    <p class="lang-en">Soil loosening factors present within Organic Active lines assist deep tuber expansion cycles, maximizing output weights even across heavily recycled field structures.</p>
+                    <p class="lang-kh text-gray-700 font-medium">លក្ខណៈសម្បត្តិជំនួយដីដែលមាននៅក្នុងផលិតផលជីសរីរាង្គ (Organic Active) ជួយជំរុញដល់ការលូតលាស់មើមដំឡូងមីឱ្យមានទំហំធំ និងធ្ងន់។ បង្កើនទិន្នផលមើមក្រោមដីបានយ៉ាងប្រសើរ ទោះបីជាដាំដុះនៅលើដីដែលធ្លាប់ដាំច្រើនដងក៏ដោយ។</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section id="about" class="py-12 px-6 max-w-6xl mx-auto reveal">
+        <div class="bg-white border border-gray-100 p-8 md:p-12 rounded-[2rem] shadow-xl grid md:grid-cols-2 gap-8 md:gap-12 items-upper">
+            <div class="space-y-2">
+                <span class="text-[25px] font-bold text-[#E4B044] uppercase tracking-wider block lang-en">Corporate Profile</span>
+                <span class="text-[25px] font-bold text-[#E4B044] uppercase tracking-wider block lang-kh">ស្គាល់ពីយើង</span>
+                <h3 class="text-2xl font-bold text-[#1B4332] font-bold lang-en">About CHHING MENG</h3>
+                <h3 class="text-2xl font-bold text-[#1B4332] font-bold lang-kh">ក្រុមហ៊ុន ឈីង ម៉េង</h3>
+                <p class="text-gray-600 text-xs md:text-sm leading-relaxed font-medium lang-en">
+                    CHHING MENG is a premium agricultural developer in Cambodia focusing on world-class organic nutrition and crop-yielding fertilizers. We provide tested, reliable field support lines including granular NPK complexes, pure DAP foundations, and specialized soil immune-blend packages.
+                </p>
+                <p class="text-gray-600 text-xs md:text-sm leading-relaxed font-medium lang-kh">
+                    ក្រុមហ៊ុន ឈីង ម៉េង គឺជាអ្នកអភិវឌ្ឍន៍អាហារូបត្ថម្ភកសិកម្មឈានមុខគេនៅក្នុងប្រទេសកម្ពុជា ដោយផ្តោតលើជីធម្មជាតិសរីរាង្គ និងជីបង្កើនទិន្នផលដំណាំលំដាប់ថ្នាក់ពិភពលោក។ យើងខ្ញុំផ្គត់ផ្គង់ផលិតផលដែលឆ្លងកាត់ការពិសោធន៍ច្បាស់លាស់ រួមមាន ជីគ្រាប់ចម្រុះ NPK, ជីគ្រឹះ DAP សុទ្ធល្អ និងកញ្ចប់ជំនួយប្រព័ន្ធការពារដីពិសេស។
+                </p>
+            </div>
+            <div class="w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-inner">
+                <img src="./src/public/BANNER_CM04.jpg" alt="Field Inspection" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <div id="product-detail-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+        <div id="modal-container" class="bg-white rounded-[2rem] shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-all duration-300 flex flex-col">
+            
+            <div class="sticky top-0 bg-white/95 backdrop-blur-md px-6 py-4 border-b border-gray-100 flex justify-between items-center z-10 rounded-t-[2rem]">
+                <div>
+                    <h4 id="modal-title-kh" class="font-bold text-xl text-gray-900 leading-tight"></h4>
+                    <h5 id="modal-title-en" class="text-xs font-bold text-[#2D6A4F] tracking-wide mt-0.5"></h5>
+                </div>
+                <button onclick="closeProductModal()" class="w-10 h-10 rounded-full bg-gray-50 hover:bg-red-50 text-gray-500 hover:text-red-500 transition-colors flex items-center justify-center focus:outline-none">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="p-6 md:p-8 space-y-8 flex-1">
+                
+                <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+                    <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden shadow-md bg-gray-50 relative">
+                        <img id="modal-image" src="" alt="Product Showcase" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-[#1B4332] text-[#E4B044] text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            Premium Grade
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-emerald-50/40 border border-emerald-100/60 p-4 rounded-xl">
+                            <h6 class="text-xs font-bold text-[#1B4332] uppercase tracking-wider mb-2 lang-en"><i class="fa-solid fa-circle-check mr-1.5 text-[#2D6A4F]"></i>Primary Purpose</h6>
+                            <h6 class="text-xs font-bold text-[#1B4332] uppercase tracking-wider mb-2 lang-kh"><i class="fa-solid fa-circle-check mr-1.5 text-[#2D6A4F]"></i>មុខងារចម្បង</h6>
+                            <p id="modal-desc-en" class="text-xs text-gray-600 leading-relaxed font-medium lang-en"></p>
+                            <p id="modal-desc-kh" class="text-xs text-gray-700 leading-relaxed font-medium lang-kh"></p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="border border-gray-100 p-3 rounded-xl bg-gray-50/50">
+                                <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider block lang-en">Packaging</span>
+                                <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider block lang-kh">ទម្ងន់វេចខ្ចប់</span>
+                                <span class="text-xs font-bold text-gray-800">50 KG / កាបូប</span>
+                            </div>
+                            <div class="border border-gray-100 p-3 rounded-xl bg-gray-50/50">
+                                <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider block lang-en">Application Window</span>
+                                <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider block lang-kh">វគ្គប្រើប្រាស់</span>
+                                <span id="modal-window-en" class="text-xs font-bold text-gray-800 block lang-en"></span>
+                                <span id="modal-window-kh" class="text-xs font-bold text-[#1B4332] block lang-kh"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-8">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <span class="w-1.5 h-6 bg-[#E4B044] rounded-full"></span>
+                        <h4 class="font-bold text-base text-gray-900 uppercase tracking-wide lang-en">Related Field Essentials</h4>
+                        <h4 class="font-bold text-base text-gray-900 uppercase tracking-wide lang-kh">ផលិតផលពាក់ព័ន្ធដែលគួរប្រើរួមគ្នា</h4>
+                    </div>
+                    
+                    <div id="modal-related-shelf" class="grid sm:grid-cols-3 gap-4">
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact" class="bg-[#1B4332] text-white pt-16 pb-8 px-6 border-t-4 border-[#E4B044]">
+        <div class="max-w-7xl mx-auto text-center space-y-4">
+            <h4 class="text-lg font-bold uppercase tracking-widest text-[#E4B044]">CHHING MENG IMPORT EXPORT CO,. LTD</h4>
+            <p class="text-xs text-emerald-100 max-w-md mx-auto lang-en">Providing advanced nutrition profiles to help local standard farming operations yield maximum profits.</p>
+            <p class="text-xs text-emerald-100 max-w-md mx-auto lang-kh">ផ្តល់ជូននូវរូបមន្តអាហារូបត្ថម្ភកម្រិតខ្ពស់ ដើម្បីជួយកសិករក្នុងស្រុកទទួលបានទិន្នផល និងប្រាក់ចំណេញអតិបរមា។</p>
+            <p class="text-xs text-emerald-200/50 pt-6">&copy; 2026 Chhing Meng Import ExportCo., Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // CENTRAL DATA MATRIX DICTIONARY FOR PRODUCT SUITES
+        // Complete product detail catalog payload database
+const productCatalogDatabase = {
+    'urea': {
+        titleKh: 'ជីអ៊ុយរ៉េ UREA អាសូតខ្ពស់',
+        titleEn: 'Urea Pure Nitrogen',
+        subtitle: 'Formula: 46-0-0',
+        image: './src/public/UREA02.jpg',
+        descEn: 'High-purity crystalline nitrogen fertilizer engineered explicitly to catalyze vegetative scaling, establish fast structural framing, and enrich wide green leaf density arrays.',
+        descKh: 'ជីអ៊ុយរ៉េលំដាប់អាសូតសុទ្ធខ្ពស់បំផុត ជម្រុញការលូតលាស់មែកធាងបានលឿនបំផុត ទ្រទ្រង់ការបង្កើតស្លឹកបៃតងក្រាស់ និងជួយឱ្យដំណាំលូតកម្ពស់លឿនទាន់ចិត្ត។',
+        specs: [
+            { labelEn: 'Primary Component', labelKh: 'សារធាតុផ្សំចម្បង', val: '46% Total Nitrogen (N)' },
+            { labelEn: 'Primary Target Crops', labelKh: 'ដំណាំគោលដៅ', val: 'Rice, Maize, Leafy Crops' },
+            { labelEn: 'Application Timing', labelKh: 'វគ្គប្រើប្រាស់', val: 'Early Vegetative Stage (10-25 Days)' },
+            { labelEn: 'Standard Dosage Rate', labelKh: 'កម្រិតប្រើប្រាស់ស្តង់ដារ', val: '50 - 75 kg per Hectare' }
+        ]
+    },
+    'dap': {
+        titleKh: 'ជី DAP បំប៉នឫស',
+        titleEn: 'DAP Foundation',
+        subtitle: 'Formula: 18-46-0',
+        image: './src/public/DAP.jpg',
+        descEn: 'Premium grade diammonium phosphate concentrated blend optimized to maximize lateral deep-root penetration configurations and ensure solid initial crop anchoring properties.',
+        descKh: 'រូបមន្តផូស្វ័រប្រមូលផ្តុំកម្រិតខ្ពស់ ជម្រុញការលូតលាស់ប្រព័ន្ធឫសឱ្យចុះជ្រៅ បែកឫសក្ដាប់ដីមាំ និងជួយបង្កើតគ្រោងដើមដំណាំតាំងពីដំណាក់កាលដំបូង។',
+        specs: [
+            { labelEn: 'Primary Component', labelKh: 'សារធាតុផ្សំចម្បង', val: '18% N + 46% Phosphate (P₂O₅)' },
+            { labelEn: 'Primary Target Crops', labelKh: 'ដំណាំគោលដៅ', val: 'Cereal Grains, Rice, Starter Crops' },
+            { labelEn: 'Application Timing', labelKh: 'វគ្គប្រើប្រាស់', val: 'Basal or Early Tillering Stage' },
+            { labelEn: 'Standard Dosage Rate', labelKh: 'កម្រិតប្រើប្រាស់ស្តង់ដារ', val: '75 - 100 kg per Hectare' }
+        ]
+    },
+    'npk-15-15-15': {
+        titleKh: 'ជី 15-15-15',
+        titleEn: '15-15-15',
+        subtitle: 'Formula: NPK 15-15-15 Balance',
+        image: './src/public/NPK15-15-15.jpg',
+        descEn: 'Highly synchronized balanced formula providing equalized portions of major macro-nutrients to support multi-crop baseline nutrition structures effectively.',
+        descKh: 'សមាមាត្រជាតិរ៉ែស្មើគ្នាគុណភាពខ្ពស់ ផ្តល់អាហារូបត្ថម្ភគ្រប់គ្រាន់ និងមានតុល្យភាពទាំង អាសូត ផូស្វ័រ និងប៉ូតាស្យូម សម្រាប់ការលូតលាស់ទូទៅគ្រប់វគ្គ។',
+        specs: [
+            { labelEn: 'Primary Component', labelKh: 'សារធាតុផ្សំចម្បង', val: '15% N - 15% P₂O₅ - 15% K₂O' },
+            { labelEn: 'Primary Target Crops', labelKh: 'ដំណាំគោលដៅ', val: 'Vegetables, Orchards, Rice' },
+            { labelEn: 'Application Timing', labelKh: 'វគ្គប្រើប្រាស់', val: 'Mid-Growth Maintenance Phase' },
+            { labelEn: 'Standard Dosage Rate', labelKh: 'កម្រិតប្រើប្រាស់ស្តង់ដារ', val: '100 - 150 kg per Hectare' }
+        ]
+    },
+    'organic': {
+        titleKh: 'ជីសរីរាង្គ និង ជីបំប៉ន',
+        titleEn: 'Organic & Mamigro-Pro',
+        subtitle: 'Formula: Bio-Conditioner Blended',
+        image: './src/public/ORGANIC.jpg',
+        descEn: 'Natural macro-complexes calculated to structuralize soil pore systems, correct biological pH ranges, and optimize mineral absorption parameters during peak growth cycles.',
+        descKh: 'ការផ្សំបញ្ចូលគ្នារវាងសារធាតុសរីរាង្គធម្មជាតិចិញ្ចឹមដី និងជីរលាយទឹកលឿនបំប៉នស្លឹក ជួយកែប្រែដីរឹង និងដីអាស៊ីតឱ្យធូរមានជីជាតិ ស្រូបយកអាហារបានរហ័ស។',
+        specs: [
+            { labelEn: 'Primary Component', labelKh: 'សារធាតុផ្សំចម្បង', val: 'Organic Matter > 20% + Trace Elements' },
+            { labelEn: 'Primary Target Crops', labelKh: 'ដំណាំគោលដៅ', val: 'All Crops, Soil Amendment' },
+            { labelEn: 'Application Timing', labelKh: 'វគ្គប្រើប្រាស់', val: 'Soil Preparation or Pre-fruiting' },
+            { labelEn: 'Standard Dosage Rate', labelKh: 'កម្រិតប្រើប្រាស់ស្តង់ដារ', val: '200 - 300 kg per Hectare' }
+        ]
+    },
+    'npk-13-13-24': {
+        titleKh: 'ជី NPK13-13-24',
+        titleEn: 'NPK13-13-24',
+        subtitle: 'Formula: 13-13-24 Premium',
+        image: './src/public/NPK13-13-24.jpg',
+        descEn: 'Premium high-potassium complex designed specifically to maximize fruit sizing weight metrics, push starch density margins, and enrich pure overall sugar concentrations.',
+        descKh: 'ជីគុណភាពខ្ពស់រូបមន្តប៉ូតាស្យូមខ្ពស់ ជម្រុញការដាក់គ្រាប់ និងការបង្កើតម្សៅ ជួយឱ្យផ្លែឈើ និងកួរដំណាំមានទម្ងន់ធ្ងន់ល្អ ព្រមទាំងបង្កើនគុណភាពផល។',
+        specs: [
+            { labelEn: 'Primary Component', labelKh: 'សារធាតុផ្សំចម្បង', val: '13% N - 13% P₂O₅ - 24% K₂O' },
+            { labelEn: 'Primary Target Crops', labelKh: 'ដំណាំគោលដៅ', val: 'Fruit Trees, Cassava, Rice Maturation' },
+            { labelEn: 'Application Timing', labelKh: 'វគ្គប្រើប្រាស់', val: 'Fruit Development / Grain Filling Stage' },
+            { labelEn: 'Standard Dosage Rate', labelKh: 'កម្រិតប្រើប្រាស់ស្តង់ដារ', val: '125 - 175 kg per Hectare' }
+        ]
+    },
+    'npk-16-16-8': {
+        titleKh: 'ជី 16-16-8',
+        titleEn: '16-16-8',
+        subtitle: 'Formula: 16-16-8 Growth Accent',
+        image: './src/public/NPK16-16-8.jpg',
+        descEn: 'Balanced vegetative developer optimized for premium leaf canopy generation, extensive tillering support, and active continuous photosynthesis speed adjustments.',
+        descKh: 'សារធាតុចិញ្ចឹមតុល្យភាពខ្ពស់ ជួយបង្កើនការធ្វើរស្មីសំយោគ បង្កើតសារធាតុបៃតង ធ្វើឱ្យស្លឹកខៀវក្រាស់លឿន និងជម្រុញការបែកស្រូវបានច្រើនមាំមួន។',
+        specs: [
+            { labelEn: 'Primary Component', labelKh: 'សារធាតុផ្សំចម្បង', val: '16% N - 16% P₂O₅ - 8% K₂O' },
+            { labelEn: 'Primary Target Crops', labelKh: 'ដំណាំគោលដៅ', val: 'Rice, Field Corn, Leafy Vegetables' },
+            { labelEn: 'Application Timing', labelKh: 'វគ្គប្រើប្រាស់', val: 'Active Tillering & Branching Stage' },
+            { labelEn: 'Standard Dosage Rate', labelKh: 'កម្រិតប្រើប្រាស់ស្តង់ដារ', val: '100 - 125 kg per Hectare' }
+        ]
+    },
+    'npk-16-20-0': {
+        titleKh: 'ជី 16-20-0',
+        titleEn: '16-20-0',
+        subtitle: 'Formula: 16-20-0 Crop Starter',
+        image: './src/public/NPK16-20-0.jpg',
+        descEn: 'High-phosphate starter framework that efficiently avoids environmental stress, limits structural chlorosis defects, and ensures steady growth patterns across variant climates.',
+        descKh: 'សារធាតុអាសូត-ផូស្វ័រប្រមូលផ្តុំ ការពារជំងឺស្លឹកលឿង ស្លឹកក្រាញ់ ដំណាំក្រិនមិនលូតលាស់ និងជួយបង្កើនភាពស៊ាំការពារដំណាំពីអាកាសធាតុប្រែប្រួល។',
+        specs: [
+            { labelEn: 'Primary Component', labelKh: 'សារធាតុផ្សំចម្បង', val: '16% Nitrogen - 20% Phosphate' },
+            { labelEn: 'Primary Target Crops', labelKh: 'ដំណាំគោលដៅ', val: 'Rice Seedlings, Field Crops, Corn' },
+            { labelEn: 'Application Timing', labelKh: 'វគ្គប្រើប្រាស់', val: 'Early Baseline Root Development' },
+            { labelEn: 'Standard Dosage Rate', labelKh: 'កម្រិតប្រើប្រាស់ស្តង់ដារ', val: '75 - 120 kg per Hectare' }
+        ]
+    },
+    'npk-20-20-15': {
+        titleKh: 'ជី 20-20-15',
+        titleEn: '20-20-15',
+        subtitle: 'Formula: 20-20-15 Yield Max',
+        image: './src/public/NPK20-20-15.jpg',
+        descEn: 'Elite macro-nutrient distribution compound calculated to strengthen structural cereal grass stalks, extend panicle size dimensions, and secure uniform maturity indexes.',
+        descKh: 'រូបមន្តពិសេសបង្កើនទិន្នផលខ្ពស់ ជួយឱ្យកួរវែង គ្រាប់ដាក់ម្សៅណែនល្អពីគល់ដល់ចុង ការពារគ្រាប់ស្កក និងជួយពង្រឹងដើមឱ្យធន់មិនងាយដួលរលំ។',
+        specs: [
+            { labelEn: 'Primary Component', labelKh: 'សារធាតុផ្សំចម្បង', val: '20% N - 20% P₂O₅ - 15% K₂O' },
+            { labelEn: 'Primary Target Crops', labelKh: 'ដំណាំគោលដៅ', val: 'Premium Rice Varieties, Sweet Corn' },
+            { labelEn: 'Application Timing', labelKh: 'វគ្គប្រើប្រាស់', val: 'Pre-flowering / Panicle Initiation' },
+            { labelEn: 'Standard Dosage Rate', labelKh: 'កម្រិតប្រើប្រាស់ស្តង់ដារ', val: '120 - 150 kg per Hectare' }
+        ]
+    },
+    'npk-15-5-25': {
+        titleKh: 'ជី 15-5-25',
+        titleEn: '15-5-25',
+        subtitle: 'Formula: 15-5-25 Tuber Expander',
+        image: './src/public/NPK15-5-25.jpg',
+        descEn: 'Potassium-dominant nutrition setup specifically built to fuel root-to-tuber scaling phases, expand overall root trunk volume, and amplify starch density parameters.',
+        descKh: 'រូបមន្តប៉ូតាស្យូមខ្ពស់ចំគោលដៅ ជម្រុញការដឹកជញ្ជូនអាហារទៅចិញ្ចឹមមើម ជំនួយការចុះមើមបានច្រើន ពង្រីកទំហំមើមដំឡូងមីឱ្យធំធាត់ និងមានម្សៅណែន។',
+        specs: [
+            { labelEn: 'Primary Component', labelKh: 'សារធាតុផ្សំចម្បង', val: '15% N - 5% P₂O₅ - 25% K₂O' },
+            { labelEn: 'Primary Target Crops', labelKh: 'ដំណាំគោលដៅ', val: 'Cassava, Potatoes, Root Crops' },
+            { labelEn: 'Application Timing', labelKh: 'វគ្គប្រើប្រាស់', val: 'Tuber Bulking Phase (3-6 Months)' },
+            { labelEn: 'Standard Dosage Rate', labelKh: 'កម្រិតប្រើប្រាស់ស្តង់ដារ', val: '150 - 200 kg per Hectare' }
+        ]
+    },
+    'calcium-boron': {
+        titleKh: 'ជី Organic',
+        titleEn: 'Organic',
+        subtitle: 'Formula: Silicon Armor Fortifier',
+        image: './src/public/ORGANIC.jpg',
+        descEn: 'Advanced micronutrient armor system engineered to fortify cell wall structures, build strong structural crystalline protective barriers, and actively minimize pre-harvest fruit drop.',
+        descKh: 'បង្កើតស្រទាប់ការពារយ៉ាងមាំមួនក្នុងកោសិកាដំណាំ ជួយឱ្យទងផ្កាស្វិតស្វ័យរឹងមាំ ជំនួយការលម្អងលំអិត និងការពារការរុះរលុះផ្កាផ្លែខ្ចីពីការវាយប្រហារផ្សេងៗ។',
+        specs: [
+            { labelEn: 'Primary Component', labelKh: 'សារធាតុផ្សំចម្បង', val: 'Water-Soluble Silicon + Boron Complexes' },
+            { labelEn: 'Primary Target Crops', labelKh: 'ដំណាំគោលដៅ', val: 'Fruiting Trees, Heavy Grains, Vegetables' },
+            { labelEn: 'Application Timing', labelKh: 'វគ្គប្រើប្រាស់', val: 'Flowering & Early Fruit Set Stages' },
+            { labelEn: 'Standard Dosage Rate', labelKh: 'កម្រិតប្រើប្រាស់ស្តង់ដារ', val: '20 - 30 mL per 20L Water' }
+        ]
+    }
+};
+
+// Open Modal Controller Trigger
+function openProductModal(productId) {
+    const product = productCatalogDatabase[productId];
+    if (!product) return; // Guard clause if id mismatches
+
+    // Map content metrics into text zones
+    document.getElementById('modal-title-kh').innerText = product.titleKh;
+    document.getElementById('modal-title-en').innerText = product.titleEn;
+    document.getElementById('modal-subtitle').innerText = product.subtitle;
+    document.getElementById('modal-image').src = product.image;
+    document.getElementById('modal-desc-en').innerText = product.descEn;
+    document.getElementById('modal-desc-kh').innerText = product.descKh;
+
+    // Reset and build Technical Specifications Grid Row Items
+    const specsContainer = document.getElementById('modal-specs-container');
+    specsContainer.innerHTML = '';
+
+    product.specs.forEach(spec => {
+        const specCard = document.createElement('div');
+        specCard.className = 'bg-gray-50 border border-gray-100 p-3 rounded-xl flex flex-col justify-center';
+        specCard.innerHTML = `
+            <span class="text-[11px] font-bold text-[#2D6A4F] uppercase tracking-wider lang-en">${spec.labelEn}</span>
+            <span class="text-[11px] font-bold text-[#2D6A4F] tracking-wide lang-kh">${spec.labelKh}</span>
+            <span class="text-sm font-semibold text-gray-800 mt-0.5">${spec.val}</span>
+        `;
+        specsContainer.appendChild(specCard);
+    });
+
+    // Animate Modal visibility classes open smoothly
+    const modal = document.getElementById('product-modal');
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.querySelector('.transform').classList.remove('scale-95');
+        modal.querySelector('.transform').classList.add('scale-100');
+    }, 20);
+    
+    // Lock baseline page body document scrolls
+    document.body.classList.add('overflow-hidden');
+}
+
+// Close Modal Action Handler
+function closeProductModal() {
+    const modal = document.getElementById('product-modal');
+    
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.querySelector('.transform').classList.remove('scale-100');
+    modal.querySelector('.transform').classList.add('scale-95');
+    
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    }, 300);
+}
+
+// Close popup safely if user clicks outside white card modal bounds
+window.onclick = function(event) {
+    const modal = document.getElementById('product-modal');
+    if (event.target === modal) {
+        closeProductModal();
+    }
+}
+
+        // LANGUAGE TRANSLATION STATE CONTROLLER
+        function setLanguage(lang) {
+            document.documentElement.setAttribute('lang', lang === 'kh' ? 'km' : 'en');
+            
+            const btnKh = document.getElementById('btn-kh');
+            const btnEn = document.getElementById('btn-en');
+            
+            if (lang === 'kh') {
+                btnKh.className = "px-2.5 sm:px-3 py-1 rounded-full transition-all duration-200 font-bold bg-[#E4B044] text-[#1B4332]";
+                btnEn.className = "px-2.5 sm:px-3 py-1 rounded-full transition-all duration-200 font-bold text-gray-300 hover:text-white";
+            } else {
+                btnEn.className = "px-2.5 sm:px-3 py-1 rounded-full transition-all duration-200 font-bold bg-[#E4B044] text-[#1B4332]";
+                btnKh.className = "px-2.5 sm:px-3 py-1 rounded-full transition-all duration-200 font-bold text-gray-300 hover:text-white";
+            }
+        }
+
+        // MOBILE NAVIGATION BAR MANAGER
+        function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+    
+    // បើម៉ឺនុយបិទ ត្រូវបើកវា និងប្តូររូបសញ្ញាទៅជាសញ្ញាខ្វែង (✕)
+    if (menu.style.maxHeight === '0px' || !menu.style.maxHeight) {
+        menu.style.maxHeight = '550px';
+        menu.style.opacity = '1';
+        menu.style.marginTop = '12px';
+        menu.style.paddingTop = '12px';
+        icon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+        // បើម៉ឺនុយបើក ត្រូវលាក់វាវិញ និងប្តូររូបសញ្ញាមកជា (☰)
+        menu.style.maxHeight = '0px';
+        menu.style.opacity = '0';
+        menu.style.marginTop = '0px';
+        menu.style.paddingTop = '0px';
+        icon.classList.replace('fa-xmark', 'fa-bars');
+    }
+}
+
+        // PRODUCT MODAL RENDER MECHANICS
+        function openProductModal(key) {
+            const product = productRegistry[key];
+            if (!product) return;
+
+            // Map standard layout details
+            document.getElementById('modal-title-kh').textContent = product.titleKh;
+            document.getElementById('modal-title-en').textContent = product.titleEn;
+            document.getElementById('modal-image').src = product.image;
+            document.getElementById('modal-desc-en').textContent = product.descEn;
+            document.getElementById('modal-desc-kh').textContent = product.descKh;
+            document.getElementById('modal-window-en').textContent = product.windowEn;
+            document.getElementById('modal-window-kh').textContent = product.windowKh;
+
+            // Generate related products row nodes cleanly
+            const shelf = document.getElementById('modal-related-shelf');
+            shelf.innerHTML = ''; 
+
+            product.related.forEach(relKey => {
+                const relProd = productRegistry[relKey];
+                if (!relProd) return;
+
+                const itemCard = document.createElement('div');
+                itemCard.className = "group border border-gray-100 p-3 rounded-2xl hover:border-emerald-200 bg-white hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between";
+                itemCard.setAttribute('onclick', `openProductModal('${relKey}')`);
+                itemCard.innerHTML = `
+                    <div>
+                        <div class="w-full h-24 rounded-xl overflow-hidden mb-2 bg-gray-50">
+                            <img src="${relProd.image}" alt="${relProd.titleEn}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h5 class="font-bold text-xs text-gray-800 line-clamp-1">${relProd.titleKh}</h5>
+                        <h6 class="text-[10px] text-[#2D6A4F] font-semibold line-clamp-1 mt-0.5">${relProd.titleEn}</h6>
+                    </div>
+                    <span class="text-[9px] font-bold text-[#2D6A4F] uppercase tracking-wider block mt-3 group-hover:text-[#1B4332]">
+                        Switch View <i class="fa-solid fa-arrow-right ml-0.5 transform group-hover:translate-x-0.5 transition-transform"></i>
+                    </span>
+                `;
+                shelf.appendChild(itemCard);
+            });
+
+            // Trigger visual transitions natively
+            const modal = document.getElementById('product-detail-modal');
+            const container = document.getElementById('modal-container');
+            
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            container.classList.remove('scale-95');
+            document.body.style.overflow = 'hidden'; // Lock primary root scroll
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('product-detail-modal');
+            const container = document.getElementById('modal-container');
+            
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            container.classList.add('scale-95');
+            document.body.style.overflow = ''; // Release primary root scroll
+        }
+
+        // Close on background backdrop click mask triggers
+        document.getElementById('product-detail-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeProductModal();
+        });
+
+        // Close on escape physical key code actions
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeProductModal();
+        });
+
+        // VIEWPORT ANIMATION INTERACTION OBSERVATION ENGINE
+        document.addEventListener("DOMContentLoaded", function () {
+            const revealElements = document.querySelectorAll(".reveal");
+            
+            const elementObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+            revealElements.forEach(element => elementObserver.observe(element));
+        });
+        // for show slide product
+    </script>
+    
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const track = document.getElementById('slider-track');
+    const prevBtn = document.getElementById('slide-prev');
+    const nextBtn = document.getElementById('slide-next');
+    
+    let currentIndex = 0;
+
+    function getVisibleCardsCount() {
+      if (window.innerWidth >= 1024) return 4; // Large screens show 4
+      if (window.innerWidth >= 640) return 2;  // Medium screens show 2
+      return 1;                                // Mobile screens show 1
+    }
+
+    function updateSliderPosition() {
+      const totalCards = track.children.length;
+      const visibleCards = getVisibleCardsCount();
+      const maxIndex = totalCards - visibleCards;
+
+      // Bound keeping indexes safe
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      if (currentIndex < 0) currentIndex = 0;
+
+      // Calculate width of one item + gap
+      const cardWidth = track.children[0].getBoundingClientRect().width;
+      const gap = 24; // Equivalent to tailwind gap-6
+      
+      const amountToMove = currentIndex * (cardWidth + gap);
+      track.style.transform = `translateX(-${amountToMove}px)`;
+    }
+
+    nextBtn.addEventListener('click', function () {
+      const totalCards = track.children.length;
+      const visibleCards = getVisibleCardsCount();
+      if (currentIndex < totalCards - visibleCards) {
+        currentIndex++;
+        updateSliderPosition();
+      }
+    });
+
+    prevBtn.addEventListener('click', function () {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSliderPosition();
+      }
+    });
+
+    // Recalculate layout layout if user rotates mobile or changes desktop screen scale
+    window.addEventListener('resize', updateSliderPosition);
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('slider-track');
+    const prevBtn = document.getElementById('slide-prev');
+    const nextBtn = document.getElementById('slide-next');
+    const items = track.children;
+    const totalItems = items.length;
+    
+    let currentIndex = 0;
+    let autoPlayInterval = null;
+    const slideDelay = 3500; // Time per slide in milliseconds (3.5s)
+
+    // Dynamically calculate visible cards based on your Tailwind breakpoints
+    function getVisibleCardsCount() {
+        if (window.innerWidth >= 1024) return 4; // lg:w-[calc(25%-18px)]
+        if (window.innerWidth >= 640) return 2;  // sm:w-[calc(50%-12px)]
+        return 1;                                // w-full
+    }
+
+    function updateSliderPosition() {
+        const visibleCards = getVisibleCardsCount();
+        const maxIndex = totalItems - visibleCards;
+
+        // Loop boundaries check
+        if (currentIndex > maxIndex) {
+            currentIndex = 0; // Reset to start
+        } else if (currentIndex < 0) {
+            currentIndex = maxIndex; // Go to last viable page
+        }
+
+        const itemWidth = items[0].getBoundingClientRect().width;
+        const gap = 24; // Equivalent to Tailwind's gap-6 (24px)
+        
+        // Calculate total shift amount
+        const translateXAmount = currentIndex * (itemWidth + gap);
+        track.style.transform = `translateX(-${translateXAmount}px)`;
+    }
+
+    function nextSlide() {
+        currentIndex++;
+        updateSliderPosition();
+    }
+
+    function prevSlide() {
+        currentIndex--;
+        updateSliderPosition();
+    }
+
+    // Autoplay Timer Management
+    function startAutoplay() {
+        stopAutoplay();
+        autoPlayInterval = setInterval(nextSlide, slideDelay);
+    }
+
+    function stopAutoplay() {
+        if (autoPlayInterval) clearInterval(autoPlayInterval);
+    }
+
+    // Click Interactions
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoplay(); // Reset timer sequence on manual override
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoplay(); // Reset timer sequence on manual override
+    });
+
+    // Pause on Hover Optimization
+    const sliderContainer = track.parentElement;
+    sliderContainer.addEventListener('mouseenter', stopAutoplay);
+    sliderContainer.addEventListener('mouseleave', startAutoplay);
+
+    // Recalculate on screen adjustment (Window resize)
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateSliderPosition();
+        }, 100);
+    });
+
+    // Launch Carousel Loop
+    startAutoplay();
+});
+</script>
+</body>
+</html>
